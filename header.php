@@ -22,3 +22,6 @@
 <link rel="stylesheet" href="css/flaticon.css">
 <link rel="stylesheet" href="css/icomoon.css">
 <link rel="stylesheet" href="css/style.css">
+<?php
+
+require_once 'functions/connection.php';
