@@ -1,5 +1,5 @@
 <?php
-require_once 'functions/connection.php';
+require_once './connection.php';
 
 function addResult($conn,$mail,$age,$sexe,$ville,$cp,$freqDouche,$tempsDouche,$debitDouche,$freqBain,$rempBain,$freqDents,$eauDents,$choixVaisselle,$freqVaisselle,$methVaisselle,$couvVaisselle,$freqMal,$dateMal,$ecoeau,$plante,$quantitePlante,$momentPlante,$eauPlante,$freqPlante,$voiture,$methVoiture,$freqVoiture,$piscine,$freqPiscine,$volumePiscine,$etiquette,$bouteille){
     $sql="INSERT INTO 
@@ -25,7 +25,6 @@ function addResult($conn,$mail,$age,$sexe,$ville,$cp,$freqDouche,$tempsDouche,$d
         `dateMal`,
         `ecoeau`,
         `plante`,
-        `quantitePlante`,
         `momentPlante`,
         `eauPlante`,
         `freqPlante`,
@@ -60,7 +59,6 @@ function addResult($conn,$mail,$age,$sexe,$ville,$cp,$freqDouche,$tempsDouche,$d
         :dateMal,
         :ecoeau,
         :plante,
-        :quantitePlante,
         :momentPlante,
         :eauPlante,
         :freqPlante,
@@ -95,7 +93,6 @@ function addResult($conn,$mail,$age,$sexe,$ville,$cp,$freqDouche,$tempsDouche,$d
     $stmt->bindValue(':dateMal', $dateMal);
     $stmt->bindValue(':ecoeau', $ecoeau);
     $stmt->bindValue(':plante', $plante);
-    $stmt->bindValue(':quantitePlante', $quantitePlante);
     $stmt->bindValue(':momentPlante', $momentPlante);
     $stmt->bindValue(':eauPlante', $eauPlante);
     $stmt->bindValue(':freqPlante', $freqPlante);

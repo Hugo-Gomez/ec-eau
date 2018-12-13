@@ -1,6 +1,6 @@
 <?php
 
-require_once 'functions/connection.php';
+require_once './connection.php';
 function getResult($conn){
     $sql="SELECT 
         `id`,
@@ -23,7 +23,6 @@ function getResult($conn){
         `dateMal`,
         `ecoeau`,
         `plante`,
-        `quantitePlante`,
         `momentPlante`,
         `eauPlante`,
         `freqPlante`,
@@ -45,4 +44,5 @@ function getResult($conn){
     while(false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)){
     $res[]=$row;
     }
+    return $res;
 }
