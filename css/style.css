@@ -15,6 +15,50 @@
   font-size: 20px;
 }
 
+.category-advice i {
+  margin-right: 1rem;
+  max-width: 10px;
+}
+
+.test-section label {
+  font-size: 17px;
+}
+
+.test-section label.title {
+  font-size: 19px;
+}
+
+.test-section .section-title {
+  margin-top: 10px;
+  font-size: 23px;
+}
+
+.test-section .section-title::before {
+   content: '• ';
+}
+
+.test-row {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.test-row .test-form {
+  padding: 30px;
+  border: 1.5px solid #167ce9;
+  border-radius: 20px;
+}
+
+.test-form .sub-label {
+  margin-left: 20px;
+}
+
+.test-form .send-button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;

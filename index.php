@@ -163,7 +163,7 @@
               <h2>Faîtes des économies et un geste pour la planète !</h2>
               <div class="row d-flex justify-content-center mt-5">
                 <div class="col-md-8">
-                  <a class="test-link" href="test.html"><span>Faire le Test</span></a>
+                  <a class="test-link" href="test.php"><span>Faire le Test</span></a>
                 </div>
               </div>
             </div>

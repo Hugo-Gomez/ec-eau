@@ -1,4 +1,5 @@
 <title>Ec'eau | La solution écologique et économique</title>
+<link rel="icon" type="image/svg+xml" size="any" href="images/logo.svg" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -20,5 +21,6 @@
 
 
 <link rel="stylesheet" href="css/flaticon.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 <link rel="stylesheet" href="css/icomoon.css">
 <link rel="stylesheet" href="css/style.css">
