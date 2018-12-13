@@ -88,8 +88,8 @@ function addResult($conn,$mail,$age,$sexe,$ville,$cp,$freqDouche,$tempsDouche,$d
     $stmt->bindValue(':rempBain', $rempBain);
     $stmt->bindValue(':freqDents', $freqDents);
     $stmt->bindValue(':eauDents', $eauDents);
-    $stmt->bindValue(':freqVaisselle', $freqVaisselle);
     $stmt->bindValue(':choixVaisselle', $choixVaisselle);
+    $stmt->bindValue(':freqVaisselle', $freqVaisselle);
     $stmt->bindValue(':methVaisselle', $methVaisselle);
     $stmt->bindValue(':couvVaisselle', $couvVaisselle);
     $stmt->bindValue(':freqMal', $freqMal);
