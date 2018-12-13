@@ -20,7 +20,6 @@ function getResult($conn){
         `methVaisselle`,
         `couvVaisselle`,
         `freqMal`,
-        `tailleMal`,
         `dateMal`,
         `ecoeau`,
         `plante`,
