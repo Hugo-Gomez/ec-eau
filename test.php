@@ -12,7 +12,7 @@
          <div class="row test-row">
            <div class="col-md-8 pr-md-8 test-form">
 
-             <form action="#" method="post" class="form-group">
+             <form action="functions/addResult.php" method="post" class="form-group">
 
              <!-- Informations personnelles -->
                <h2 class="section-title">Informations personnelles</h2>

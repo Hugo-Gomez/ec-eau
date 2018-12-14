@@ -1,2 +1,1 @@
-mail,age,sexe,ville,cp,freqDouche,tempsDouche,debitDouche,freqBain,rempBain,freqDents,eauDents,freqVaisselle,choixVaisselle,methVaisselle,couvVaisselle,freqMal,dateMal,ecoeau,plante,quantitePlante,momentPlante,eauPlante,freqPlante,voiture,methVoiture,freqVoiture,piscine,freqPiscine,volumePiscine,etiquette,bouteille
-1,1,test,test,1,1,1,test,1,test,1,test,1,test,test,1,1,test,test,test,test,test,test,1,test,test,1,test,test,test,test,test
+mail,age,sexe,ville,cp,freqDouche,tempsDouche,debitDouche,freqBain,rempBain,freqDents,eauDents,freqVaisselle,choixVaisselle,methVaisselle,couvVaisselle,freqMal,dateMal,ecoeau,plante,momentPlante,eauPlante,freqPlante,voiture,methVoiture,freqVoiture,piscine,freqPiscine,volumePiscine,etiquette,bouteille
