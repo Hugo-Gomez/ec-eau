@@ -111,7 +111,7 @@ $res = getResult($conn);
 $bool = True;
 for($i = 0; $i <= $res.count(); $i++){
     if($res[i]['mail'] == $_POST['email']){
-        $bool = False  
+        $bool = False  ;
     }
 }
 if($bool == True){
