@@ -18,7 +18,7 @@
                <label class="title" for="email">Email : </label>
                <input class="form-control" type="email" required name="email" id="email"><br>
                <label class="title" for="age">Age : </label>
-               <input class="form-control" type="text" required name="age" id="age"><br>
+               <input class="form-control" type="number" required name="age" id="age"><br>
                <label class="title" for="sexe">Sexe : </label>
                <select class="sexe form-control" id="sexe" required name="sexe">
                  <option value="homme">Homme</option>

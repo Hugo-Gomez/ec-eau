@@ -1,5 +1,6 @@
 <?php
 require_once './connection.php';
+require_once './getResult.php';
 function addResult($conn,$mail,$age,$sexe,$ville,$cp,$freqDouche,$tempsDouche,$debitDouche,$freqBain,$rempBain,$freqDents,$eauDents,$choixVaisselle,$freqVaisselle,$methVaisselle,$couvVaisselle,$freqMal,$dateMal,$ecoeau,$plante,$momentPlante,$eauPlante,$freqPlante,$voiture,$methVoiture,$freqVoiture,$piscine,$freqPiscine,$volumePiscine,$etiquette,$bouteille){
     $sql="INSERT INTO 
     `result`
@@ -106,6 +107,10 @@ function addResult($conn,$mail,$age,$sexe,$ville,$cp,$freqDouche,$tempsDouche,$d
     errorHandler($stmt);
 }
 
+$res = getResult($conn);
+for($i = 0; $i <= $res.count(); $i++){
+    if($res[i]['mail'] == $_POST['email']){
+        
 addResult(
     $conn,
     $_POST['email'],
@@ -140,4 +145,9 @@ addResult(
     $_POST['q10'],
     $_POST['q11']
 );
-header('location:/index.php');
+
+header('location:/valid_form.php');
+    }else{
+        header('location:/alredy_form.php');
+    }
+}
