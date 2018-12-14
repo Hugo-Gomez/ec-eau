@@ -35,9 +35,9 @@
            <!-- Question 1 -->
                <h2 class="section-title">Douche</h2>
                <label class="title" for="q1a">Combien de douches prenez-vous par semaine ?</label>
-               <input class="form-control" type="number" name="q1a" id="q1a"><br>
+               <input class="form-control" type="number" required name="q1a" id="q1a"><br>
                <label class="title" for="q1b">Combien de temps en moyenne passez-vous sous la douche (en minute) ?</label>
-               <input class="form-control" type="text" name="q1b" id="q1b"><br>
+               <input class="form-control" type="text" required name="q1b" id="q1b"><br>
                <label class="title" for="q1c">Quel est le débit de votre pomme de douche ?</label>
                <div class="sub-label">
                  <input type="radio" id="q1c1"
@@ -56,7 +56,7 @@
            <!-- Question 2 -->
                <h2 class="section-title">Bains</h2>
                <label class="title" for="q2a">Combien de bains prenez-vous par semaine ?</label>
-               <input class="form-control" type="number" name="q2a" id="q2a"><br>
+               <input class="form-control" type="number" required name="q2a" id="q2a"><br>
                <div id="hideQ2">
                  <label class="title" for="q2b">(si oui) Remplissez-vous votre baignoire entièrement ?</label>
                  <div class="sub-label">
@@ -73,7 +73,7 @@
            <!-- Question 3 -->
                <h2 class="section-title">Lavage de dents</h2>
                <label class="title" for="q3a">Combien de fois vous brossez-vous les dents par jour ?</label>
-               <input class="form-control" type="number" name="q3a" id="q3a"><br>
+               <input class="form-control" type="number" required name="q3a" id="q3a"><br>
                <label class="title" for="q3b">Coupez vous l’eau pendant le brossage de vos dents ?</label>
                <div class="sub-label">
                  <input type="radio" id="q3b1"
@@ -92,7 +92,7 @@
            <!-- Question 4 -->
                <h2 class="section-title">Vaisselle</h2>
                <label class="title" for="q4a">Combien de vaisselles faites-vous par semaine ?</label>
-               <input class="form-control" type="number" name="q4a" id="q4a"><br>
+               <input class="form-control" type="number" required name="q4a" id="q4a"><br>
 
                <label class="title" for="q4b">Lavez-vous votre vaisselle à la main ou avec un lave-vaisselle ?</label>
                <div class="sub-label">
@@ -126,7 +126,7 @@
            <!-- Question 5 -->
                <h2 class="section-title">Lave-linge</h2>
                <label class="title" for="q5a">Combien de fois utilisez-vous votre lave-linge par mois ?</label>
-               <input class="form-control" type="number" name="q5a" id="q5a"><br>
+               <input class="form-control" type="number" required name="q5a" id="q5a"><br>
                <label class="title" for="q5b">Le lave-linge utilisé est-il récent ou ancien ?</label>
                <div class="sub-label">
                  <input type="radio" id="q5b1"
