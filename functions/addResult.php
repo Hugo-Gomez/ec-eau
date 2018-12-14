@@ -1,6 +1,5 @@
 <?php
 require_once './connection.php';
-
 function addResult($conn,$mail,$age,$sexe,$ville,$cp,$freqDouche,$tempsDouche,$debitDouche,$freqBain,$rempBain,$freqDents,$eauDents,$choixVaisselle,$freqVaisselle,$methVaisselle,$couvVaisselle,$freqMal,$dateMal,$ecoeau,$plante,$momentPlante,$eauPlante,$freqPlante,$voiture,$methVoiture,$freqVoiture,$piscine,$freqPiscine,$volumePiscine,$etiquette,$bouteille){
     $sql="INSERT INTO 
     `result`

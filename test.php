@@ -145,7 +145,8 @@
                <input type="checkbox" name="q6" value="mitigeur"> Mitigeur<br>
                <input type="checkbox" name="q6" value="recuperateur"> Récupérateur d'eau de pluie<br>
                <input type="checkbox" name="q6" value="chasse d'eau"> Chasse d'eau économe<br>
-
+               <input type="hidden" name="q6b" value="">
+               
            <!-- Question 7 -->
                <h2 class="section-title">Jardin</h2>
                <label class="title" for="q7a">Avez-vous des plantes / un jardin ?</label>
