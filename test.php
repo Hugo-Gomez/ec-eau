@@ -16,19 +16,19 @@
              <!-- Informations personnelles -->
                <h2 class="section-title">Informations personnelles</h2>
                <label class="title" for="email">Email : </label>
-               <input class="form-control" type="email" name="email" id="email"><br>
+               <input class="form-control" type="email" required name="email" id="email"><br>
                <label class="title" for="age">Age : </label>
-               <input class="form-control" type="text" name="age" id="age"><br>
+               <input class="form-control" type="text" required name="age" id="age"><br>
                <label class="title" for="sexe">Sexe : </label>
-               <select class="sexe form-control" id="sexe" name="sexe">
+               <select class="sexe form-control" id="sexe" required name="sexe">
                  <option value="homme">Homme</option>
                  <option value="femme">Femme</option>
                  <option value="autre">Autre</option>
                </select><br>
                <label class="title" for="ville">Ville : </label>
-               <input class="form-control" type="text" name="ville" id="ville"><br>
+               <input class="form-control" type="text" required name="ville" id="ville"><br>
                <label class="title" for="cp">Code Postal : </label>
-               <input class="form-control" type="text" name="cp" id="cp"><br>
+               <input class="form-control" type="text" required name="cp" id="cp"><br>
 
                <br>
 
