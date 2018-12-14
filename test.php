@@ -16,9 +16,9 @@
              <!-- Informations personnelles -->
                <h2 class="section-title">Informations personnelles</h2>
                <label class="title" for="email">Email : </label>
-               <input class="form-control" type="email" required name="email" id="email"><br>
+               <input placeholder="Exemple : exemple@mail.com" class="form-control" type="email" required name="email" id="email"><br>
                <label class="title" for="age">Age : </label>
-               <input class="form-control" type="number" required name="age" id="age"><br>
+               <input placeholder="Exemple : 42" class="form-control" type="number" required name="age" id="age"><br>
                <label class="title" for="sexe">Sexe : </label>
                <select class="sexe form-control" id="sexe" required name="sexe">
                  <option value="homme">Homme</option>
@@ -26,18 +26,18 @@
                  <option value="autre">Autre</option>
                </select><br>
                <label class="title" for="ville">Ville : </label>
-               <input class="form-control" type="text" required name="ville" id="ville"><br>
+               <input placeholder="Exemple : Montreuil" class="form-control" type="text" required name="ville" id="ville"><br>
                <label class="title" for="cp">Code Postal : </label>
-               <input class="form-control" type="text" required name="cp" id="cp"><br>
+               <input placeholder="Exemple : 93100" class="form-control" type="text" required name="cp" id="cp"><br>
 
                <br>
 
            <!-- Question 1 -->
                <h2 class="section-title">Douche</h2>
                <label class="title" for="q1a">Combien de douche prenez-vous par semaine ?</label>
-               <input class="form-control" type="number" required name="q1a" id="q1a"><br>
+               <input placeholder="Exemple : 7" class="form-control" type="number" required name="q1a" id="q1a"><br>
                <label class="title" for="q1b">Combien de temps en moyenne passez-vous sous la douche (en minute) ?</label>
-               <input class="form-control" type="text" required name="q1b" id="q1b"><br>
+               <input placeholder="Exemple : 10" class="form-control" type="text" required name="q1b" id="q1b"><br>
                <label class="title" for="q1c">Quel est le débit de votre pomme de douche ?</label>
                <div class="sub-label">
                  <input type="radio" id="q1c1"
@@ -56,7 +56,7 @@
            <!-- Question 2 -->
                <h2 class="section-title">Bains</h2>
                <label class="title" for="q2a">Combien de bain prenez-vous par semaine ?</label>
-               <input class="form-control" type="number" required name="q2a" id="q2a"><br>
+               <input  placeholder="Exemple : 3" class="form-control" type="number" required name="q2a" id="q2a"><br>
                <div id="hideQ2">
                  <label class="title" for="q2b">Remplissez-vous votre baignoire entièrement ?</label>
                  <div class="sub-label">
@@ -73,7 +73,7 @@
            <!-- Question 3 -->
                <h2 class="section-title">Lavage de dents</h2>
                <label class="title" for="q3a">Combien de fois vous brossez-vous les dents par jour ?</label>
-               <input class="form-control" type="number" required name="q3a" id="q3a"><br>
+               <input placeholder="Exemple : 2" class="form-control" type="number" required name="q3a" id="q3a"><br>
                <label class="title" for="q3b">Coupez vous l’eau pendant le brossage de vos dents ?</label>
                <div class="sub-label">
                  <input type="radio" id="q3b1"
@@ -92,7 +92,7 @@
            <!-- Question 4 -->
                <h2 class="section-title">Vaisselle</h2>
                <label class="title" for="q4a">Combien de vaisselle faites-vous par semaine ?</label>
-               <input class="form-control" type="number" required name="q4a" id="q4a"><br>
+               <input  placeholder="Exemple : 5" class="form-control" type="number" required name="q4a" id="q4a"><br>
 
                <label class="title" for="q4b">Lavez-vous votre vaisselle à la main ou avec un lave-vaisselle ?</label>
                <div class="sub-label">
@@ -184,7 +184,7 @@
                    <label for="q7c2">Eau de pluie</label>
                  </div>
                  <label class="title" for="q7d">Combien de fois arrosez-vous vos plantes par mois ?</label>
-                 <input class="form-control" type="number" name="q7d" id="q7d"><br>
+                 <input  placeholder="Exemple : 2" class="form-control" type="number" name="q7d" id="q7d"><br>
                </div>
 
            <!-- Question 8 -->
@@ -228,9 +228,17 @@
                </div>
                <div id="hideQ9">
                  <label class="title" for="q9b">Quel est le volume de votre piscine (en m3)?</label>
-                 <input class="form-control" type="number" name="q9b" id="q9b"><br>
-                 <label class="title" for="q9c">Videz-vous votre piscine chaque année ?</label>
-                 <input class="form-control" type="number" name="q9c" id="q9c"><br>
+                 <input placeholder="Exemple : 15" class="form-control" type="number" name="q9b" id="q9b"><br>
+                 <label class="title" for="q9c">Videz-vous votre piscine entièrement chaque année?</label>
+               <div class="sub-label">
+                 <input type="radio" id="q9c1"
+                  name="q9c" value="oui">
+                 <label for="q9c1">Oui</label>
+                 <br>
+                 <input type="radio" id="q9c2"
+                  name="q9c" value="non" checked>
+                 <label for="q9c2">Non</label>
+               </div>
                </div>
 
            <!-- Question 10 -->
