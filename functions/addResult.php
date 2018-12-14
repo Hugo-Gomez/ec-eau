@@ -140,3 +140,4 @@ addResult(
     $_POST['q10'],
     $_POST['q11']
 );
+header('location:/index.php');
