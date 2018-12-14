@@ -34,7 +34,7 @@
 
            <!-- Question 1 -->
                <h2 class="section-title">Douche</h2>
-               <label class="title" for="q1a">Combien de douches prenez-vous par semaine ?</label>
+               <label class="title" for="q1a">Combien de douche prenez-vous par semaine ?</label>
                <input class="form-control" type="number" required name="q1a" id="q1a"><br>
                <label class="title" for="q1b">Combien de temps en moyenne passez-vous sous la douche (en minute) ?</label>
                <input class="form-control" type="text" required name="q1b" id="q1b"><br>
@@ -55,10 +55,10 @@
 
            <!-- Question 2 -->
                <h2 class="section-title">Bains</h2>
-               <label class="title" for="q2a">Combien de bains prenez-vous par semaine ?</label>
+               <label class="title" for="q2a">Combien de bain prenez-vous par semaine ?</label>
                <input class="form-control" type="number" required name="q2a" id="q2a"><br>
                <div id="hideQ2">
-                 <label class="title" for="q2b">(si oui) Remplissez-vous votre baignoire entièrement ?</label>
+                 <label class="title" for="q2b">Remplissez-vous votre baignoire entièrement ?</label>
                  <div class="sub-label">
                    <input type="radio" id="q2b1"
                     name="q2b" value="oui" checked>
@@ -91,7 +91,7 @@
 
            <!-- Question 4 -->
                <h2 class="section-title">Vaisselle</h2>
-               <label class="title" for="q4a">Combien de vaisselles faites-vous par semaine ?</label>
+               <label class="title" for="q4a">Combien de vaisselle faites-vous par semaine ?</label>
                <input class="form-control" type="number" required name="q4a" id="q4a"><br>
 
                <label class="title" for="q4b">Lavez-vous votre vaisselle à la main ou avec un lave-vaisselle ?</label>
@@ -106,7 +106,7 @@
                </div>
 
                <div id="hideQ4c">
-                 <label class="title" for="q4c">(si vaisselle à la main) Laissez-vous couler l'eau lors de votre vaisselle ?</label>
+                 <label class="title" for="q4c">Laissez-vous couler l'eau lors de votre vaisselle ?</label>
                  <div class="sub-label">
                    <input type="radio" id="q4c1"
                     name="q4c" value="oui">
@@ -119,7 +119,7 @@
                </div>
 
                <div id="hideQ4d">
-                 <label class="title" for="q4d">(si eau coule) Combien de pièces lavez-vous en moyenne par vaisselle ?</label>
+                 <label class="title" for="q4d">Combien de pièce lavez-vous en moyenne par vaisselle ?</label>
                  <input class="form-control" type="number" name="q4d" id="q4d"><br>
                </div>
 
@@ -159,7 +159,7 @@
                  <label for="q7a2">Non</label>
                </div>
                <div id="hideQ7">
-                 <label class="title" for="q7b">(si oui) Quand arrosez-vous vos plantes ?</label>
+                 <label class="title" for="q7b">Quand arrosez-vous vos plantes ?</label>
                  <div class="sub-label">
                    <input type="radio" id="q7b1"
                     name="q7b" value="matin" checked>
@@ -173,7 +173,7 @@
                     name="q7b" value="soir">
                    <label for="q7b2">Soir</label>
                  </div>
-                 <label class="title" for="q7c">(si oui) Avec quelle eau arrosez-vous vos plantes ?</label>
+                 <label class="title" for="q7c">Avec quelle eau arrosez-vous vos plantes ?</label>
                  <div class="sub-label">
                    <input type="radio" id="q7c1"
                     name="q7c" value="robinet" checked>
@@ -183,7 +183,7 @@
                     name="q7c" value="pluie">
                    <label for="q7c2">Eau de pluie</label>
                  </div>
-                 <label class="title" for="q7d">(si oui) Combien de fois arrosez-vous vos plantes par mois ?</label>
+                 <label class="title" for="q7d">Combien de fois arrosez-vous vos plantes par mois ?</label>
                  <input class="form-control" type="number" name="q7d" id="q7d"><br>
                </div>
 
@@ -200,7 +200,7 @@
                  <label for="q8a2">Non</label>
                </div>
                <div id="hideQ8">
-                 <label class="title" for="q8b">(si oui) Utilisez-vous le lavage automatique ou le lavage manuel</label>
+                 <label class="title" for="q8b">Utilisez-vous le lavage automatique ou le lavage manuel</label>
                  <div class="sub-label">
                    <input type="radio" id="q8b1"
                     name="q8b" value="automatique" checked>
@@ -210,7 +210,7 @@
                     name="q8b" value="manuel">
                    <label for="q8b2">Lavage manuel</label>
                  </div>
-                 <label class="title" for="q8c">(si oui) Combien de fois lavez-vous votre voiture par mois ?</label>
+                 <label class="title" for="q8c">Combien de fois lavez-vous votre voiture par mois ?</label>
                  <input class="form-control" type="number" name="q8c" id="q8c"><br>
                </div>
 
@@ -227,9 +227,9 @@
                  <label for="q9a2">Non</label>
                </div>
                <div id="hideQ9">
-                 <label class="title" for="q9b">(si oui) Quel est le volume de votre piscine (en m3)?</label>
+                 <label class="title" for="q9b">Quel est le volume de votre piscine (en m3)?</label>
                  <input class="form-control" type="number" name="q9b" id="q9b"><br>
-                 <label class="title" for="q9c">(si oui) Videz-vous votre piscine chaque année ?</label>
+                 <label class="title" for="q9c">Videz-vous votre piscine chaque année ?</label>
                  <input class="form-control" type="number" name="q9c" id="q9c"><br>
                </div>
 
