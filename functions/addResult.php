@@ -108,13 +108,11 @@ function addResult($conn,$mail,$age,$sexe,$ville,$cp,$freqDouche,$tempsDouche,$d
 }
 
 $res = getResult($conn);
-$bool = True;
 for($i = 0; $i <= $res.count(); $i++){
     if($res[i]['mail'] == $_POST['email']){
-        $bool = False  ;
+        header('location:/already_form.php');
     }
 }
-if($bool == True){
     addResult(
         $conn,
         $_POST['email'],
@@ -150,7 +148,3 @@ if($bool == True){
         $_POST['q11']
     );
     header('location:/valid_form.php');
-}else{
-    
-    header('location:/already_form.php');
-}
