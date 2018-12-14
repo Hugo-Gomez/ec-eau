@@ -6,7 +6,6 @@
   <body>
 
     <?php include "topbar.php" ?>
-
     <section class="test-section">
        <div class="container">
          <div class="row test-row">
@@ -21,7 +20,7 @@
                <label class="title" for="age">Age : </label>
                <input class="form-control" type="text" name="age" id="age"><br>
                <label class="title" for="sexe">Sexe : </label>
-               <select class="sexe" id="sexe" name="sexe">
+               <select class="sexe form-control" id="sexe" name="sexe">
                  <option value="homme">Homme</option>
                  <option value="femme">Femme</option>
                  <option value="autre">Autre</option>
@@ -145,7 +144,7 @@
                <input type="checkbox" name="q6" value="mitigeur"> Mitigeur<br>
                <input type="checkbox" name="q6" value="recuperateur"> Récupérateur d'eau de pluie<br>
                <input type="checkbox" name="q6" value="chasse d'eau"> Chasse d'eau économe<br>
-               <input type="hidden" name="q6b" value="">
+               <input type="hidden" id="q6b" name="q6b" value="000">
                
            <!-- Question 7 -->
                <h2 class="section-title">Jardin</h2>
@@ -273,9 +272,34 @@
 
      <?php include "js-import.php" ?>
 
-     <script type="text/javascript" src="js/script/test.js">
+     <script type="text/javascript" src="js/script/test.js"></script>
+     <script>
+        var temp = 0
+        var temp1 = 0;
+        var temp2 = 0;
+        var temp3 = 0;
 
-     </script>
+        $('input[name=q6]').on('change', function(){
+          //console.log($('input[name=q6]')[0].checked);
+          if ($('input[name=q6]')[0].checked){
+            temp1 = 100;
+          } else {
+            temp1 = 0;
+          }
+          if ($('input[name=q6]')[1].checked){
+            temp2 = 10;
+          } else {
+            temp2 = 0;
+          }
+          if ($('input[name=q6]')[2].checked){
+            temp3 = 1;
+          } else {
+            temp3 = 0;
+          }
+          temp = temp1 + temp2 + temp3;
+          $('#q6b').val(temp);
+      })
+    </script>
 
     <?php include "footer.php" ?>
 

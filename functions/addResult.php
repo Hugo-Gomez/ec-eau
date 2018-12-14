@@ -126,7 +126,7 @@ addResult(
     $_POST['q4d'],
     $_POST['q5a'],
     $_POST['q5b'],
-    $_POST['q6'],
+    $_POST['q6b'],
     $_POST['q7a'],
     $_POST['q7b'],
     $_POST['q7c'],
