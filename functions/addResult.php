@@ -148,6 +148,6 @@ addResult(
 
 header('location:/valid_form.php');
     }else{
-        header('location:/alredy_form.php');
+        header('location:/already_form.php');
     }
 }
