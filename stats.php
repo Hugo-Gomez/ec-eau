@@ -88,7 +88,7 @@
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-          <h2 class="title">Lorem ipsum</h2>
+          <h2 class="title">Douche</h2>
           <p class="description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -99,7 +99,7 @@
           </p>
         </div>
         <div class="col-md-10">
-          <canvas id="lineChart" width="400" height="150"></canvas>
+          <canvas id="showerChart" width="400" height="150"></canvas>
         </div>
       </div>
     </div>
@@ -110,7 +110,7 @@
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-            <h2>Lorem ipsum</h2>
+            <h2>Bains</h2>
             <p class="description">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -121,7 +121,7 @@
             </p>
           </div>
           <div class="col-md-10">
-            <canvas class="white-plot" id="barChart" width="400" height="150"></canvas>
+            <canvas class="white-plot" id="bathChart" width="400" height="150"></canvas>
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-          <h2 class="title">Lorem ipsum</h2>
+          <h2 class="title">Lavage de dents</h2>
           <p class="description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -143,7 +143,7 @@
           </p>
         </div>
         <div class="col-md-10">
-          <canvas id="doughnutChart" width="400" height="150"></canvas>
+          <canvas id="teethChart" width="400" height="150"></canvas>
         </div>
       </div>
     </div>
@@ -154,7 +154,7 @@
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-            <h2>Lorem ipsum</h2>
+            <h2>Vaiselle</h2>
             <p class="description">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -165,7 +165,139 @@
             </p>
           </div>
           <div class="col-md-10">
-            <canvas class="white-plot" id="multiChart" width="400" height="150"></canvas>
+            <canvas class="white-plot" id="dishChart" width="400" height="150"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="presentation-section">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+          <h2 class="title">Lave-linge</h2>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </div>
+        <div class="col-md-10">
+          <canvas id="washingChart" width="400" height="150"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section-parallax test-section">
+    <div class="parallax-img d-flex align-items-center">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <h2>Jardin</h2>
+            <p class="description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+          </div>
+          <div class="col-md-10">
+            <canvas class="white-plot" id="gardenChart" width="400" height="150"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="presentation-section">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+          <h2 class="title">Voiture</h2>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </div>
+        <div class="col-md-10">
+          <canvas id="carChart" width="400" height="150"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section-parallax test-section">
+    <div class="parallax-img d-flex align-items-center">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <h2>Piscine</h2>
+            <p class="description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+          </div>
+          <div class="col-md-10">
+            <canvas class="white-plot" id="poolChart" width="400" height="150"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="presentation-section">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+          <h2 class="title">Étiquettes énergétiques</h2>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </div>
+        <div class="col-md-10">
+          <canvas id="stickerChart" width="400" height="150"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section-parallax test-section">
+    <div class="parallax-img d-flex align-items-center">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <h2>Eau en bouteille</h2>
+            <p class="description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+          </div>
+          <div class="col-md-10">
+            <canvas class="white-plot" id="bottleChart" width="400" height="150"></canvas>
           </div>
         </div>
       </div>
@@ -178,8 +310,8 @@
 
   <script type="text/javascript">
     // Line Chart
-    var lineCtx = document.getElementById('lineChart').getContext('2d');
-    var lineChart = new Chart(lineCtx, {
+    var showerCtx = document.getElementById('showerChart').getContext('2d');
+    var showerChart = new Chart(showerCtx, {
       // The type of chart we want to create
       type: 'line',
 
@@ -197,8 +329,8 @@
     });
 
     // Bar Chart
-    var barCtx = document.getElementById('barChart').getContext('2d');
-    var barChart = new Chart(barCtx, {
+    var bathCtx = document.getElementById('bathChart').getContext('2d');
+    var bathChart = new Chart(bathCtx, {
       // The type of chart we want to create
       type: 'bar',
 
@@ -216,8 +348,8 @@
     });
 
     // Doughnut Chart
-    var doughnutCtx = document.getElementById('doughnutChart').getContext('2d');
-    var doughnutChart = new Chart(doughnutCtx, {
+    var teethCtx = document.getElementById('teethChart').getContext('2d');
+    var teethChart = new Chart(teethCtx, {
       // The type of chart we want to create
       type: 'doughnut',
 
@@ -235,8 +367,8 @@
     });
 
     // Multi Chart
-    var multiCtx = document.getElementById('multiChart').getContext('2d');
-    var multiChart = new Chart(multiCtx, {
+    var dishCtx = document.getElementById('dishChart').getContext('2d');
+    var dishChart = new Chart(dishCtx, {
       // The type of chart we want to create
       type: 'bar',
 
@@ -255,6 +387,120 @@
           }],
           // X
           labels: ["January", "February", "March", "April", "May", "June", "July"]
+      }
+    });
+
+    // Bar Chart
+    var washingCtx = document.getElementById('washingChart').getContext('2d');
+    var washingChart = new Chart(washingCtx, {
+      // The type of chart we want to create
+      type: 'bar',
+
+      // The data for our dataset
+      data: {
+          // X
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [{
+              label: "My First dataset",
+              backgroundColor: 'orange',
+              borderColor: 'orange',
+              data: [5, 10, 5, 2, 20, 30, 45],
+          }]
+      }
+    });
+
+    // Bar Chart
+    var gardenCtx = document.getElementById('gardenChart').getContext('2d');
+    var gardenChart = new Chart(gardenCtx, {
+      // The type of chart we want to create
+      type: 'bar',
+
+      // The data for our dataset
+      data: {
+          // X
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [{
+              label: "My First dataset",
+              backgroundColor: 'orange',
+              borderColor: 'orange',
+              data: [5, 10, 5, 2, 20, 30, 45],
+          }]
+      }
+    });
+
+    // Bar Chart
+    var carCtx = document.getElementById('carChart').getContext('2d');
+    var carChart = new Chart(carCtx, {
+      // The type of chart we want to create
+      type: 'bar',
+
+      // The data for our dataset
+      data: {
+          // X
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [{
+              label: "My First dataset",
+              backgroundColor: 'orange',
+              borderColor: 'orange',
+              data: [5, 10, 5, 2, 20, 30, 45],
+          }]
+      }
+    });
+
+    // Bar Chart
+    var poolCtx = document.getElementById('poolChart').getContext('2d');
+    var poolChart = new Chart(poolCtx, {
+      // The type of chart we want to create
+      type: 'bar',
+
+      // The data for our dataset
+      data: {
+          // X
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [{
+              label: "My First dataset",
+              backgroundColor: 'orange',
+              borderColor: 'orange',
+              data: [5, 10, 5, 2, 20, 30, 45],
+          }]
+      }
+    });
+
+    // Bar Chart
+    var stickerCtx = document.getElementById('stickerChart').getContext('2d');
+    var stickerChart = new Chart(stickerCtx, {
+      // The type of chart we want to create
+      type: 'bar',
+
+      // The data for our dataset
+      data: {
+          // X
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [{
+              label: "My First dataset",
+              backgroundColor: 'orange',
+              borderColor: 'orange',
+              data: [5, 10, 5, 2, 20, 30, 45],
+          }]
+      }
+    });
+
+    // Bar Chart
+    var bottleCtx = document.getElementById('bottleChart').getContext('2d');
+    var bottleChart = new Chart(bottleCtx, {
+      // The type of chart we want to create
+      type: 'bar',
+
+      // The data for our dataset
+      data: {
+          // X
+          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          datasets: [{
+              label: "My First dataset",
+              backgroundColor: 'orange',
+              borderColor: 'orange',
+              data: [5, 10, 5, 2, 20, 30, 45],
+          }]
       }
     });
   </script>
