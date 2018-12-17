@@ -59,6 +59,17 @@
   justify-content: center;
 }
 
+/* GENERIC PERSO */
+
+.white-text {
+  color: white !important;
+}
+
+.white-plot {
+  background-color: white;
+  border: 5px solid #73e8b8;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
