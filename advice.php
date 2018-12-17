@@ -47,8 +47,24 @@
 		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="60">0</strong>
-		                <span>Hospital</span>
+		                <strong class="number" data-number="150">150</strong>
+		                <span>Litres par jour et par personne en 2018</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="20">0</strong>
+		                <span>Litres par jour et par personne au XVIII siècle</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="175">0</strong>
+		                <span>Bouteilles d'eau vendues chaque seconde </span>
 		              </div>
 		            </div>
 		          </div>
@@ -56,23 +72,7 @@
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number" data-number="200">0</strong>
-		                <span>Doctors</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="100">0</strong>
-		                <span>Clinics</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
-		              <div class="text">
-		                <strong class="number" data-number="200">0</strong>
-		                <span>Reviews</span>
+		                <span>Litres d'eau pour un lavage de voiture à domicile</span>
 		              </div>
 		            </div>
 		          </div>
