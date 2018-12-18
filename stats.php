@@ -332,12 +332,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
             <h2>Piscine</h2>
             <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+              On remarque ici une majorité de personne n'ayant pas de piscine.
             </p>
           </div>
           <div class="col-md-10 plot">
@@ -354,12 +349,9 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
           <h2 class="title">Étiquettes énergétiques</h2>
           <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            On remarque ici que les résultats n'ont pas énormément de différence, même si
+            la plupart des usagers ont tendances à ne pas faire attention aux étiquettes
+            énergétiques à l'achat d'un produit électroménager.
           </p>
         </div>
         <div class="col-md-10 plot">
@@ -376,12 +368,9 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
             <h2>Eau en bouteille</h2>
             <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+              On remarque ici que la majorité des usagers ne consomme pas d'eau en bouteille
+              et préfère donc consommer directement via le robinet, qui est une pratique
+              bien meilleure pour la préservation de l'eau.
             </p>
           </div>
           <div class="col-md-10 plot">
@@ -544,8 +533,8 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
       data: {
           labels: ["Oui", "Non"],
           datasets: [{
-              backgroundColor: ['#2288e4', "orange"],
-              borderColor: ['#2288e4', "orange"],
+              backgroundColor: ["orange", '#2288e4'],
+              borderColor: ["orange", '#2288e4'],
               data: <?php echo json_encode($pctPiscine) ?>,
           }]
       },
