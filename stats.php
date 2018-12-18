@@ -53,20 +53,20 @@ $pctVLave = ($vLave / $height) * 100;
 
 //machine a laver
 $MAL0_5 = 0;
-$MAL1_10 = 0;
+$MAL5_10 = 0;
 $MAL10_15 = 0;
 $MAL15_20 = 0;
 $MAL20_25 = 0;
 $MAL25_plus = 0;
 foreach ($res as $row) {
   if($row["freqMal"] >= 0 && $row["freqMal"] < 5){$MAL0_5 ++;}
-  if($row["freqMal"] >= 5 && $row["freqMal"] < 10){$MAL1_10 ++;}
+  if($row["freqMal"] >= 5 && $row["freqMal"] < 10){$MAL5_10 ++;}
   if($row["freqMal"] >= 10 && $row["freqMal"] < 15){$MAL10_15 ++;}
   if($row["freqMal"] >= 15 && $row["freqMal"] < 20){$MAL15_20 ++;}
   if($row["freqMal"] >= 20 && $row["freqMal"] < 25){$MAL20_25 ++;}
   if($row["freqMal"] >= 25 ){$MAL25_plus ++;}
 }
-//echo "<!-- MAL :".$MAL0_5." ".$MAL1_10." ".$MAL10_15." ".$MAL15_20." ".$MAL20_25." ".$MAL25_plus."-->";
+//echo "<!-- MAL :".$MAL0_5." ".$MAL5_10." ".$MAL10_15." ".$MAL15_20." ".$MAL20_25." ".$MAL25_plus."-->";
 
 //plante
 $pRobinet = 0;
@@ -85,7 +85,7 @@ $pctPPluie = ($pPluie / $pHeight) * 100;
 //echo "<!-- Plante pct :".$pctPRobinet." ".$pctPPluie."-->";
 
 //piscine
-$piOui = 0;  
+$piOui = 0;
 $piNon = 0;
 $piHeight = 0;
 foreach ($res as $row) {
@@ -101,7 +101,7 @@ $pctPiNon = ($piNon / $piHeight) * 100;
 //echo "<!-- Piscine pct :".$pctPiOui." ".$pctPiNon."-->";
 
 //etiquette
-$etOui = 0;  
+$etOui = 0;
 $etNon = 0;
 foreach ($res as $row) {
   if($row["etiquette"] == "oui"){$etOui ++;}
@@ -114,7 +114,7 @@ $pctEtNon = ($etNon / $height) * 100;
 
 
 //bouteille
-$boOui = 0;  
+$boOui = 0;
 $boNon = 0;
 foreach ($res as $row) {
   if($row["bouteille"] == "bouteille"){$boOui ++;}
@@ -132,27 +132,27 @@ $pctBoNon = ($boNon / $height) * 100;
 //tab
 
 $douche = [$dFaible,$dMoyen,$dFort];
-$pctDouche = [$pctDFaible,$pctDMoyen,$pctDFort];
+$pctDouche = [round($pctDFaible),round($pctDMoyen),round($pctDFort)];
 
 $bain = [$bainNon,$bainOui];
-$pctBain = [$pctBainNon,$pctBainOui];
+$pctBain = [round($pctBainNon),round($pctBainOui)];
 
 $vaisselle = [$vMain,$vLave];
-$pctVaisselle = [$pctVMain,$pctVLave];
+$pctVaisselle = [round($pctVMain),round($pctVLave)];
 
-$MAL = [$MAL0_5,$MAL1_10,$MAL10_15,$MAL15_20,$MAL20_25,$MAL25_plus];
+$MAL = [$MAL0_5,$MAL5_10,$MAL10_15,$MAL15_20,$MAL20_25,$MAL25_plus];
 
 $plante = [$pRobinet,$pPluie];
-$pctPlante = [$pctPRobinet,$pctPPluie];
+$pctPlante = [round($pctPRobinet),round($pctPPluie)];
 
 $piscine = [$piOui,$piNon];
-$pctPiscine = [$pctPiOui,$pctPiNon];
+$pctPiscine = [round($pctPiOui),round($pctPiNon)];
 
 $etiquette = [$etOui,$etNon];
-$pctEtiquette = [$pctEtOui,$pctEtNon];
+$pctEtiquette = [round($pctEtOui),round($pctEtNon)];
 
 $bouteille = [$boOui,$boNon];
-$pctBouteille = [$pctBoOui,$pctBoNon];
+$pctBouteille = [round($pctBoOui),round($pctBoNon)];
 
 ?>
   <?php include "topbar.php" ?>
@@ -240,15 +240,12 @@ $pctBouteille = [$pctBoOui,$pctBoNon];
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
           <h2 class="title">Douche</h2>
           <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            Nous pouvons voir grâce à ce graphique que la majorité des usagers ayant répondu
+            à notre questionnaire on une consommation moyenne d'eau lors de leur douche (coupe
+            l'eau pendant le savonage).
           </p>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-10 plot">
           <canvas id="showerChart" width="400" height="150"></canvas>
         </div>
       </div>
@@ -262,15 +259,11 @@ $pctBouteille = [$pctBoOui,$pctBoNon];
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
             <h2>Bains</h2>
             <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+              Ici, on voit que seulement 14% des usagers ayant répondu à notre questionnaire prennent
+              un bain.
             </p>
           </div>
-          <div class="col-md-10">
+          <div class="col-md-10 plot">
             <canvas class="white-plot" id="bathChart" width="400" height="150"></canvas>
           </div>
         </div>
@@ -282,62 +275,15 @@ $pctBouteille = [$pctBoOui,$pctBoNon];
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-          <h2 class="title">Lavage de dents</h2>
+          <h2 class="title">Vaiselle</h2>
           <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            On observe sur ce graphique quelque chose d'intéressant, car la différence entre
+            les usagers utilisant un lave-vaisselle et ceux qui font la vaiselle à la main n'est
+            pas très importante, même si il y a plus de personne qui font la vaiselle à la main.
           </p>
         </div>
-        <div class="col-md-10">
-          <canvas id="teethChart" width="400" height="150"></canvas>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ftco-section-parallax test-section">
-    <div class="parallax-img d-flex align-items-center">
-      <div class="container">
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-            <h2>Vaiselle</h2>
-            <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-          </div>
-          <div class="col-md-10">
-            <canvas class="white-plot" id="dishChart" width="400" height="150"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="presentation-section">
-    <div class="container">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-          <h2 class="title">Lave-linge</h2>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
-        </div>
-        <div class="col-md-10">
-          <canvas id="washingChart" width="400" height="150"></canvas>
+        <div class="col-md-10 plot">
+          <canvas id="dishChart" width="400" height="150"></canvas>
         </div>
       </div>
     </div>
@@ -350,15 +296,12 @@ $pctBouteille = [$pctBoOui,$pctBoNon];
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
             <h2>Jardin</h2>
             <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+              On remarque une presque équivalence ici sur le sujet de l'arrosage du jardin. En
+              effet, comme il est dit sur la page conseil, il est préférable d'utiliser l'eau
+              de pluie pour ce genre d'activité.
             </p>
           </div>
-          <div class="col-md-10">
+          <div class="col-md-10 plot">
             <canvas class="white-plot" id="gardenChart" width="400" height="150"></canvas>
           </div>
         </div>
@@ -370,18 +313,14 @@ $pctBouteille = [$pctBoOui,$pctBoNon];
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-          <h2 class="title">Voiture</h2>
+          <h2 class="title">Lave-linge</h2>
           <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            On remarque qu'une grande partie des usagers ayant répondu à notre test font
+            0 à 10 machine par mois.
           </p>
         </div>
-        <div class="col-md-10">
-          <canvas id="carChart" width="400" height="150"></canvas>
+        <div class="col-md-10 plot">
+          <canvas id="washingChart" width="400" height="150"></canvas>
         </div>
       </div>
     </div>
@@ -402,7 +341,7 @@ $pctBouteille = [$pctBoOui,$pctBoNon];
               anim id est laborum.
             </p>
           </div>
-          <div class="col-md-10">
+          <div class="col-md-10 plot">
             <canvas class="white-plot" id="poolChart" width="400" height="150"></canvas>
           </div>
         </div>
@@ -424,7 +363,7 @@ $pctBouteille = [$pctBoOui,$pctBoNon];
             anim id est laborum.
           </p>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-10 plot">
           <canvas id="stickerChart" width="400" height="150"></canvas>
         </div>
       </div>
@@ -446,7 +385,7 @@ $pctBouteille = [$pctBoOui,$pctBoNon];
               anim id est laborum.
             </p>
           </div>
-          <div class="col-md-10">
+          <div class="col-md-10 plot">
             <canvas class="white-plot" id="bottleChart" width="400" height="150"></canvas>
           </div>
         </div>
@@ -459,200 +398,249 @@ $pctBouteille = [$pctBoOui,$pctBoNon];
   <?php include "js-import.php" ?>
 
   <script type="text/javascript">
-    // Line Chart
+    // Douche
     var showerCtx = document.getElementById('showerChart').getContext('2d');
     var showerChart = new Chart(showerCtx, {
-      // The type of chart we want to create
-      type: 'line',
-
-      // The data for our dataset
+      type: 'bar',
       data: {
-          // X
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          labels: ["Fort", "Moyen", "Faible"],
           datasets: [{
-              label: "My First dataset",
               backgroundColor: '#2288e4',
               borderColor: '#2288e4',
-              data: [0, 10, 5, 2, 20, 30, 45],
+              data: <?php echo json_encode($douche) ?>,
           }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Débit de la pomme de douche"
+        },
+        legend: {
+          display: false
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
       }
     });
 
-    // Bar Chart
+    // Bains
     var bathCtx = document.getElementById('bathChart').getContext('2d');
     var bathChart = new Chart(bathCtx, {
-      // The type of chart we want to create
-      type: 'bar',
-
-      // The data for our dataset
+      type: 'pie',
       data: {
-          // X
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          labels: ["Non", "Oui"],
           datasets: [{
-              label: "My First dataset",
-              backgroundColor: 'orange',
-              borderColor: 'orange',
-              data: [5, 10, 5, 2, 20, 30, 45],
+              backgroundColor: ['#2288e4', "orange"],
+              borderColor: ['#2288e4', "orange"],
+              data: <?php echo json_encode($pctBain) ?>,
           }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Pourcentage de bains"
+        },
+        legend: {
+            labels: {
+                fontColor: "white",
+            }
+        }
       }
     });
 
-    // Doughnut Chart
-    var teethCtx = document.getElementById('teethChart').getContext('2d');
-    var teethChart = new Chart(teethCtx, {
-      // The type of chart we want to create
-      type: 'doughnut',
-
-      // The data for our dataset
+    // Lave-vaiselle
+    var dishCtx = document.getElementById('dishChart').getContext('2d');
+    var dishChart = new Chart(dishCtx, {
+      type: 'bar',
       data: {
-          // X
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          labels: ["À la main", "Lave-Vaiselle"],
           datasets: [{
-              label: "My First dataset",
-              backgroundColor: ["#18a084", "#34495d", "#e74c3c", "#40d47e", "#9b59b6", "#2288e4", "orange"],
-              borderColor: ["#18a084", "#34495d", "#e74c3c", "#40d47e", "#9b59b6", "#2288e4", "orange"],
-              data: [5, 10, 5, 2, 20, 30, 45],
+              backgroundColor: "orange",
+              borderColor: "orange",
+              data: <?php echo json_encode($vaisselle) ?>,
           }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Méthode de vaisselle"
+        },
+        legend: {
+          display: false
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+
+    // Jardin
+    var gardenCtx = document.getElementById('gardenChart').getContext('2d');
+    var gardenChart = new Chart(gardenCtx, {
+      type: 'pie',
+      data: {
+          labels: ["Robinet", "Pluie"],
+          datasets: [{
+              backgroundColor: ['#2288e4', "orange"],
+              borderColor: ['#2288e4', "orange"],
+              data: <?php echo json_encode($pctPlante) ?>,
+          }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Provenance de l'eau utilisé pour le jardin"
+        },
+        legend: {
+            labels: {
+                fontColor: "white",
+            }
+        }
+      }
+    });
+
+    // Machine à laver
+    var washingCtx = document.getElementById('washingChart').getContext('2d');
+    var washingChart = new Chart(washingCtx, {
+      type: 'bar',
+      data: {
+          labels: ["0-5", "5-10", "10-15", "15-20", "20-25", "+25"],
+          datasets: [{
+              backgroundColor: '#2288e4',
+              borderColor: '#2288e4',
+              data: <?php echo json_encode($MAL) ?>,
+          }]
+      },
+      options: {
+          title: {
+            display: true,
+            text: "Nombre de machine lancé par mois"
+          },
+        legend: {
+          display: false
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+
+    // Piscine
+    var poolCtx = document.getElementById('poolChart').getContext('2d');
+    var poolChart = new Chart(poolCtx, {
+      type: 'pie',
+      data: {
+          labels: ["Oui", "Non"],
+          datasets: [{
+              backgroundColor: ['#2288e4', "orange"],
+              borderColor: ['#2288e4', "orange"],
+              data: <?php echo json_encode($pctPiscine) ?>,
+          }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Possession de piscine"
+        },
+        legend: {
+            labels: {
+                fontColor: "white",
+            }
+        }
+      }
+    });
+
+    // Etiquette énergétique
+    var stickerCtx = document.getElementById('stickerChart').getContext('2d');
+    var stickerChart = new Chart(stickerCtx, {
+      type: 'bar',
+      data: {
+          labels: ["Oui", "Non"],
+          datasets: [{
+              backgroundColor: '#2288e4',
+              borderColor: '#2288e4',
+              data: <?php echo json_encode($etiquette) ?>,
+          }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Attention portée aux étiquettes énergies à l'achat d'un bien électroménager"
+        },
+        legend: {
+          display: false
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+
+    // Bouteille
+    var bottleCtx = document.getElementById('bottleChart').getContext('2d');
+    var bottleChart = new Chart(bottleCtx, {
+      type: 'pie',
+      data: {
+          labels: ["Oui", "Non"],
+          datasets: [{
+              backgroundColor: ['#2288e4', "orange"],
+              borderColor: ['#2288e4', "orange"],
+              data: <?php echo json_encode($pctBouteille) ?>,
+          }]
+      },
+      options: {
+          title: {
+            display: true,
+            text: "Consommation de bouteille d'eau"
+          },
+        legend: {
+            labels: {
+                fontColor: "white",
+            }
+        }
       }
     });
 
     // Multi Chart
-    var dishCtx = document.getElementById('dishChart').getContext('2d');
-    var dishChart = new Chart(dishCtx, {
-      // The type of chart we want to create
-      type: 'bar',
-
-      // The data for our dataset
-      data: {
-          datasets: [{
-              label: "My First dataset",
-              backgroundColor: "orange",
-              borderColor: "orange",
-              data: [5, 10, 5, 2, 20, 30, 45],
-          }, {
-            label: "My Second dataset",
-            backgroundColor: "#2288e4",
-            borderColor: "#2288e4",
-            data: [10, 20, 15, 2, 22, 13, 14],
-          }],
-          // X
-          labels: ["January", "February", "March", "April", "May", "June", "July"]
-      }
-    });
-
-    // Bar Chart
-    var washingCtx = document.getElementById('washingChart').getContext('2d');
-    var washingChart = new Chart(washingCtx, {
-      // The type of chart we want to create
-      type: 'bar',
-
-      // The data for our dataset
-      data: {
-          // X
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [{
-              label: "My First dataset",
-              backgroundColor: 'orange',
-              borderColor: 'orange',
-              data: [5, 10, 5, 2, 20, 30, 45],
-          }]
-      }
-    });
-
-    // Bar Chart
-    var gardenCtx = document.getElementById('gardenChart').getContext('2d');
-    var gardenChart = new Chart(gardenCtx, {
-      // The type of chart we want to create
-      type: 'bar',
-
-      // The data for our dataset
-      data: {
-          // X
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [{
-              label: "My First dataset",
-              backgroundColor: 'orange',
-              borderColor: 'orange',
-              data: [5, 10, 5, 2, 20, 30, 45],
-          }]
-      }
-    });
-
-    // Bar Chart
-    var carCtx = document.getElementById('carChart').getContext('2d');
-    var carChart = new Chart(carCtx, {
-      // The type of chart we want to create
-      type: 'bar',
-
-      // The data for our dataset
-      data: {
-          // X
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [{
-              label: "My First dataset",
-              backgroundColor: 'orange',
-              borderColor: 'orange',
-              data: [5, 10, 5, 2, 20, 30, 45],
-          }]
-      }
-    });
-
-    // Bar Chart
-    var poolCtx = document.getElementById('poolChart').getContext('2d');
-    var poolChart = new Chart(poolCtx, {
-      // The type of chart we want to create
-      type: 'bar',
-
-      // The data for our dataset
-      data: {
-          // X
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [{
-              label: "My First dataset",
-              backgroundColor: 'orange',
-              borderColor: 'orange',
-              data: [5, 10, 5, 2, 20, 30, 45],
-          }]
-      }
-    });
-
-    // Bar Chart
-    var stickerCtx = document.getElementById('stickerChart').getContext('2d');
-    var stickerChart = new Chart(stickerCtx, {
-      // The type of chart we want to create
-      type: 'bar',
-
-      // The data for our dataset
-      data: {
-          // X
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [{
-              label: "My First dataset",
-              backgroundColor: 'orange',
-              borderColor: 'orange',
-              data: [5, 10, 5, 2, 20, 30, 45],
-          }]
-      }
-    });
-
-    // Bar Chart
-    var bottleCtx = document.getElementById('bottleChart').getContext('2d');
-    var bottleChart = new Chart(bottleCtx, {
-      // The type of chart we want to create
-      type: 'bar',
-
-      // The data for our dataset
-      data: {
-          // X
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [{
-              label: "My First dataset",
-              backgroundColor: 'orange',
-              borderColor: 'orange',
-              data: [5, 10, 5, 2, 20, 30, 45],
-          }]
-      }
-    });
+    // var multiCtx = document.getElementById('multiChart').getContext('2d');
+    // var multiChart = new Chart(multiCtx, {
+    //
+    //   type: 'bar',
+    //
+    //
+    //   data: {
+    //       datasets: [{
+    //           label: "My First dataset",
+    //           backgroundColor: "orange",
+    //           borderColor: "orange",
+    //           data: [5, 10, 5, 2, 20, 30, 45],
+    //       }, {
+    //         label: "My Second dataset",
+    //         backgroundColor: "#2288e4",
+    //         borderColor: "#2288e4",
+    //         data: [10, 20, 15, 2, 22, 13, 14],
+    //       }],
+    //       // X
+    //       labels: ["January", "February", "March", "April", "May", "June", "July"]
+    //   }
+    // });
   </script>
 
   </body>
