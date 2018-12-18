@@ -87,12 +87,11 @@ $pctPPluie = ($pPluie / $pHeight) * 100;
 //piscine
 $piOui = 0;
 $piNon = 0;
-$piHeight = 0;
 foreach ($res as $row) {
   if($row["piscine"] == "oui"){
-    $piHeight ++;
-    if($row["freqPiscine"] == "oui"){$piOui ++;}
-    if($row["freqPiscine"] == "non"){$piNon ++;}
+    $piOui ++;
+  }else{
+    $piNon ++;
   }
 }
 $pctPiOui = ($piOui / $piHeight) * 100;

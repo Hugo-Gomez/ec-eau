@@ -21,7 +21,7 @@ function getResult($conn){
         `couvVaisselle`,
         `freqMal`,
         `dateMal`,
-        `ecoeau`,
+        `ecoEau`,
         `plante`,
         `momentPlante`,
         `eauPlante`,
