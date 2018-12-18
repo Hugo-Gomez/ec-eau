@@ -1,10 +1,160 @@
+<?php
+require_once 'functions/connection.php';
+require_once 'functions/getResult.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <?php include "header.php" ?>
   </head>
   <body>
+<?php
+$res = getResult($conn);
+$height = count($res);
 
+//douche
+$dMoyen = 0;
+$dFaible = 0;
+$dFort = 0;
+foreach ($res as $row) {
+  if($row["debitDouche"] == "moyen"){$dMoyen ++;}
+  if($row["debitDouche"] == "faible"){$dFaible ++;}
+  if($row["debitDouche"] == "fort"){$dFort ++;}
+}
+$pctDMoyen = ($dMoyen / $height) * 100;
+$pctDFaible = ($dFaible/ $height) * 100;
+$pctDFort = ($dFort / $height) * 100;
+//echo "<!-- douche :".$dFaible." ".$dMoyen." ".$dFort."-->";
+//echo "<!-- douche pct :".$pctDFaible." ".$pctDMoyen." ".$pctDFort."-->";
+
+//bain
+$bainOui = 0;
+$bainNon = 0;
+foreach ($res as $row) {
+  if($row["freqBain"] != 0){$bainOui ++;}
+  if($row["freqBain"] == 0){$bainNon ++;}
+}
+$pctBainOui = ($bainOui / $height) * 100;
+$pctBainNon = ($bainNon / $height) * 100;
+//echo "<!-- bain :".$bainNon." ".$bainOui."-->";
+//echo "<!-- bain pct :".$pctBainNon." ".$pctBainOui."-->";
+
+//vaisselle
+$vMain = 0;
+$vLave = 0;
+foreach ($res as $row) {
+  if($row["choixVaisselle"] == "main"){$vMain ++;}
+  if($row["choixVaisselle"] == "lave-vaisselle"){$vLave ++;}
+}
+$pctVMain = ($vMain / $height) * 100;
+$pctVLave = ($vLave / $height) * 100;
+//echo "<!-- vaisselle :".$vMain." ".$vLave."-->";
+//echo "<!-- vaisselle pct :".$pctVMain." ".$pctVLave."-->";
+
+//machine a laver
+$MAL0_5 = 0;
+$MAL1_10 = 0;
+$MAL10_15 = 0;
+$MAL15_20 = 0;
+$MAL20_25 = 0;
+$MAL25_plus = 0;
+foreach ($res as $row) {
+  if($row["freqMal"] >= 0 && $row["freqMal"] < 5){$MAL0_5 ++;}
+  if($row["freqMal"] >= 5 && $row["freqMal"] < 10){$MAL1_10 ++;}
+  if($row["freqMal"] >= 10 && $row["freqMal"] < 15){$MAL10_15 ++;}
+  if($row["freqMal"] >= 15 && $row["freqMal"] < 20){$MAL15_20 ++;}
+  if($row["freqMal"] >= 20 && $row["freqMal"] < 25){$MAL20_25 ++;}
+  if($row["freqMal"] >= 25 ){$MAL25_plus ++;}
+}
+//echo "<!-- MAL :".$MAL0_5." ".$MAL1_10." ".$MAL10_15." ".$MAL15_20." ".$MAL20_25." ".$MAL25_plus."-->";
+
+//plante
+$pRobinet = 0;
+$pPluie = 0;
+$pHeight = 0;
+foreach ($res as $row) {
+  if($row["plante"] == "oui"){
+    $pHeight ++;
+    if($row["eauPlante"] == "robinet"){$pRobinet ++;}
+    if($row["eauPlante"] == "pluie"){$pPluie ++;}
+  }
+}
+$pctPRobinet = ($pRobinet / $pHeight) * 100;
+$pctPPluie = ($pPluie / $pHeight) * 100;
+//echo "<!-- Plante :".$pRobinet." ".$pPluie."-->";
+//echo "<!-- Plante pct :".$pctPRobinet." ".$pctPPluie."-->";
+
+//piscine
+$piOui = 0;  
+$piNon = 0;
+$piHeight = 0;
+foreach ($res as $row) {
+  if($row["piscine"] == "oui"){
+    $piHeight ++;
+    if($row["freqPiscine"] == "oui"){$piOui ++;}
+    if($row["freqPiscine"] == "non"){$piNon ++;}
+  }
+}
+$pctPiOui = ($piOui / $piHeight) * 100;
+$pctPiNon = ($piNon / $piHeight) * 100;
+//echo "<!-- Piscine :".$piOui." ".$piNon."-->";
+//echo "<!-- Piscine pct :".$pctPiOui." ".$pctPiNon."-->";
+
+//etiquette
+$etOui = 0;  
+$etNon = 0;
+foreach ($res as $row) {
+  if($row["etiquette"] == "oui"){$etOui ++;}
+  if($row["etiquette"] == "non"){$etNon ++;}
+}
+$pctEtOui = ($etOui / $height) * 100;
+$pctEtNon = ($etNon / $height) * 100;
+//echo "<!-- Ettiquette :".$etOui." ".$etNon."-->";
+//echo "<!-- Ettiquette pct :".$pctEtOui." ".$pctEtNon."-->";
+
+
+//bouteille
+$boOui = 0;  
+$boNon = 0;
+foreach ($res as $row) {
+  if($row["bouteille"] == "bouteille"){$boOui ++;}
+  if($row["bouteille"] == "robinet"){$boNon ++;}
+}
+$pctBoOui = ($boOui / $height) * 100;
+$pctBoNon = ($boNon / $height) * 100;
+//echo "<!-- Bouteille :".$boOui." ".$boNon."-->";
+//echo "<!-- Bouteille pct :".$pctBoOui." ".$pctBoNon."-->";
+
+
+
+
+
+//tab
+
+$douche = [$dFaible,$dMoyen,$dFort];
+$pctDouche = [$pctDFaible,$pctDMoyen,$pctDFort];
+
+$bain = [$bainNon,$bainOui];
+$pctBain = [$pctBainNon,$pctBainOui];
+
+$vaisselle = [$vMain,$vLave];
+$pctVaisselle = [$pctVMain,$pctVLave];
+
+$MAL = [$MAL0_5,$MAL1_10,$MAL10_15,$MAL15_20,$MAL20_25,$MAL25_plus];
+
+$plante = [$pRobinet,$pPluie];
+$pctPlante = [$pctPRobinet,$pctPPluie];
+
+$piscine = [$piOui,$piNon];
+$pctPiscine = [$pctPiOui,$pctPiNon];
+
+$etiquette = [$etOui,$etNon];
+$pctEtiquette = [$pctEtOui,$pctEtNon];
+
+$bouteille = [$boOui,$boNon];
+$pctBouteille = [$pctBoOui,$pctBoNon];
+
+?>
   <?php include "topbar.php" ?>
 
   <div class="hero-wrap" style="background-image: url('images/stats-wp.jpg'); background-attachment:fixed;">

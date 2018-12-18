@@ -1,0 +1,202 @@
+mail,age,sexe,ville,cp,freqDouche,tempsDouche,debitDouche,freqBain,rempBain,freqDents,eauDents,freqVaisselle,choixVaisselle,methVaisselle,couvVaisselle,freqMal,dateMal,ecoeau,plante,momentPlante,eauPlante,freqPlante,voiture,methVoiture,freqVoiture,piscine,freqPiscine,volumePiscine,etiquette,bouteille
+69,21,homme,"Saint Leu la Foret",95320,7,13,fort,0,oui,2,oui,3,lave-vaisselle,non,0,20,ancien,0,oui,soir,robinet,15,non,manuel,1,non,non,0,non,bouteille
+70,22,homme,MONTREUIL,93100,7,3,moyen,0,oui,2,non,7,main,oui,20,4,recent,0,non,matin,robinet,0,oui,automatique,1,non,non,0,non,robinet
+71,29,homme,amiens,80000,7,5,fort,1,oui,3,non,14,main,oui,20,8,ancien,100,non,matin,robinet,0,oui,manuel,2,non,non,0,non,bouteille
+72,26,femme,Albert,80300,7,15,moyen,0,oui,2,oui,14,main,oui,20,4,recent,10,oui,soir,pluie,8,oui,automatique,1,non,non,0,oui,bouteille
+74,56,homme,"Villeneuve en Montagne",71390,7,8,moyen,0,oui,0,oui,3,lave-vaisselle,non,0,4,recent,1,oui,soir,pluie,10,oui,manuel,0,non,non,0,oui,robinet
+75,21,femme,"Montreuil ",93100,7,25,moyen,0,oui,1,oui,2,main,non,0,4,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,oui,robinet
+76,54,femme,BRIIS-sous-Forges,91640,7,10,moyen,0,oui,1,oui,3,lave-vaisselle,non,0,12,ancien,1,oui,soir,robinet,6,oui,automatique,0,non,non,0,oui,robinet
+77,58,femme,CHAUFFAILLES,71170,6,10,fort,0,oui,1,parfois,3,lave-vaisselle,non,0,3,recent,0,oui,matin,robinet,3,oui,automatique,0,non,non,0,oui,bouteille
+78,27,femme,Palaiseau,91120,7,15,moyen,0,oui,2,oui,6,lave-vaisselle,non,0,8,recent,0,non,matin,robinet,0,oui,automatique,0,non,non,0,oui,bouteille
+79,51,homme,Paris,75003,7,15,fort,0,oui,1,non,2,lave-vaisselle,non,0,8,recent,0,oui,journÃ©e,robinet,5,non,automatique,0,non,non,0,non,robinet
+80,45,femme,Paris,75010,14,15,moyen,0,oui,3,non,7,lave-vaisselle,non,0,8,ancien,100,non,matin,robinet,0,oui,automatique,0,non,non,0,oui,bouteille
+81,31,homme,Chauffailles,71170,7,15,faible,0,oui,1,non,2,lave-vaisselle,non,0,8,recent,110,non,matin,robinet,0,oui,automatique,1,non,non,0,oui,robinet
+82,25,femme,Nice,6300,5,5,moyen,0,oui,2,oui,7,main,non,0,12,ancien,100,non,matin,robinet,0,oui,manuel,0,non,non,0,oui,robinet
+83,48,femme,Dijon,21000,7,10,moyen,0,oui,1,oui,5,lave-vaisselle,non,0,15,ancien,111,oui,soir,pluie,5,oui,automatique,0,non,non,0,oui,robinet
+84,49,homme,Paris,75003,7,6,faible,0,oui,2,oui,1,lave-vaisselle,non,0,5,recent,100,oui,soir,robinet,4,non,automatique,0,non,non,0,oui,robinet
+555,21,femme,amiens,80000,7,5,moyen,0,oui,2,oui,3,main,oui,20,30,recent,1,non,matin,robinet,0,non,automatique,0,non,non,0,non,bouteille
+556,28,femme,amiens,80000,7,5,fort,0,oui,1,oui,7,main,oui,16,8,ancien,0,non,matin,robinet,0,oui,manuel,2,non,non,0,non,robinet
+557,18,homme,Albert,80300,7,3,moyen,0,oui,2,parfois,7,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,oui,automatique,1,non,non,0,oui,bouteille
+558,21,femme,amiens,80000,7,5,fort,0,oui,2,oui,3,main,oui,20,10,ancien,100,oui,soir,pluie,8,oui,manuel,1,non,non,0,oui,bouteille
+559,42,homme,amiens,80000,7,5,moyen,0,oui,1,oui,14,main,oui,16,4,ancien,100,non,matin,robinet,0,non,automatique,0,non,non,0,oui,robinet
+560,30,femme,albert,80300,7,5,faible,0,oui,2,non,14,lave-vaisselle,non,0,30,recent,0,non,matin,robinet,0,oui,manuel,1,non,non,0,oui,robinet
+561,34,homme,amiens,80000,7,3,moyen,0,oui,2,non,14,main,oui,16,4,recent,1,non,matin,robinet,0,oui,manuel,1,non,non,0,non,robinet
+562,21,homme,amiens,80000,7,5,fort,0,oui,1,non,1,main,non,0,4,recent,100,non,matin,robinet,16,oui,manuel,2,non,non,0,non,robinet
+563,28,homme,Albert,80300,7,10,moyen,0,oui,2,non,14,lave-vaisselle,non,0,10,recent,10,oui,soir,pluie,8,non,automatique,0,non,non,0,non,bouteille
+564,36,homme,Bouzincourt,80300,14,10,moyen,0,oui,2,non,7,main,oui,20,4,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+565,31,femme,amiens,80000,7,15,fort,2,non,3,oui,2,main,oui,16,30,recent,0,oui,matin,pluie,30,oui,automatique,1,non,non,0,non,robinet
+566,25,homme,peronne,80200,7,5,moyen,0,oui,1,non,7,lave-vaisselle,non,0,12,recent,100,non,matin,pluie,0,oui,manuel,1,non,non,0,non,robinet
+567,39,femme,amiens,80000,7,10,moyen,3,oui,2,non,14,main,non,0,20,ancien,101,non,matin,robinet,0,oui,automatique,1,oui,oui,60,oui,robinet
+568,42,homme,amiens,80000,7,10,moyen,0,oui,2,oui,3,main,non,0,8,recent,0,non,matin,robinet,0,oui,manuel,1,non,non,0,non,bouteille
+569,36,homme,montreuil,93100,7,5,moyen,0,oui,2,non,3,main,non,0,4,recent,100,oui,soir,robinet,8,oui,manuel,8,non,non,0,non,bouteille
+570,22,homme,amiens,80000,7,5,fort,0,oui,2,non,7,main,oui,20,6,recent,0,non,matin,robinet,0,oui,automatique,1,non,non,0,oui,robinet
+571,48,homme,Bouzincourt,80300,7,10,moyen,1,non,2,non,14,lave-vaisselle,non,0,4,recent,1,non,matin,robinet,0,oui,automatique,1,non,non,0,non,robinet
+572,51,homme,Albert,80300,7,5,moyen,0,oui,2,non,6,lave-vaisselle,non,0,12,ancien,0,non,matin,robinet,0,oui,automatique,1,non,non,0,non,robinet
+573,36,femme,peronne,80200,7,15,faible,0,oui,1,non,7,main,oui,8,6,ancien,10,oui,matin,robinet,8,oui,automatique,2,non,non,0,oui,robinet
+574,22,homme,amiens,80000,7,10,faible,0,oui,1,oui,14,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,oui,manuel,1,non,non,0,non,bouteille
+575,48,homme,amiens,80000,14,3,moyen,0,oui,2,non,5,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+576,51,homme,amiens,80000,7,5,moyen,0,oui,1,oui,2,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+577,21,femme,amiens,80000,7,10,fort,0,oui,1,oui,14,main,oui,8,4,ancien,0,oui,matin,robinet,8,non,automatique,0,oui,non,50,non,robinet
+578,28,homme,paris,75016,7,25,moyen,0,oui,2,non,7,main,oui,20,4,recent,100,non,matin,robinet,0,non,automatique,0,non,non,0,oui,bouteille
+579,31,homme,"BRAY SUR SOMME",80340,7,10,moyen,0,oui,2,oui,3,main,oui,20,4,recent,110,oui,soir,pluie,6,oui,manuel,1,non,non,0,non,bouteille
+580,25,femme,Bouzincourt,80300,9,15,moyen,0,oui,2,parfois,3,main,oui,6,4,recent,100,non,matin,robinet,0,oui,automatique,1,non,non,0,non,robinet
+581,23,femme,paris,75017,7,25,moyen,0,oui,1,oui,14,lave-vaisselle,non,0,6,recent,100,non,matin,robinet,0,oui,manuel,2,non,non,0,non,robinet
+582,22,homme,paris,75016,7,10,fort,0,oui,2,non,14,lave-vaisselle,non,0,30,recent,0,non,matin,robinet,0,non,automatique,0,oui,oui,45,oui,robinet
+583,45,femme,peronne,80200,14,15,faible,0,oui,2,non,21,lave-vaisselle,non,0,4,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+584,31,homme,amiens,80000,7,10,faible,0,oui,3,non,14,main,oui,20,30,recent,0,oui,soir,pluie,8,non,automatique,0,non,non,0,non,robinet
+585,21,homme,Albert,80300,7,10,moyen,0,oui,2,oui,9,main,non,0,12,recent,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+586,29,femme,SUZANNE,80340,7,15,moyen,2,non,2,oui,7,main,oui,20,20,recent,100,non,matin,robinet,0,non,automatique,0,non,non,0,non,bouteille
+587,26,homme,paris,75011,7,15,fort,0,oui,2,parfois,3,main,oui,30,4,recent,10,oui,soir,pluie,16,oui,manuel,1,non,non,0,non,robinet
+588,32,homme,peronne,80200,7,5,moyen,0,oui,2,oui,3,lave-vaisselle,non,0,4,ancien,0,non,matin,robinet,0,oui,automatique,2,non,non,0,oui,robinet
+589,21,homme,MEAULTE,80300,14,3,moyen,0,oui,1,non,7,main,oui,4,4,recent,0,oui,journée,pluie,6,oui,manuel,2,non,non,0,oui,robinet
+590,28,homme,CHAULNES,80320,7,5,moyen,0,oui,2,non,3,main,oui,7,4,recent,0,non,matin,robinet,0,oui,automatique,4,non,non,0,non,bouteille
+591,23,homme,Albert,80300,7,10,moyen,0,oui,2,oui,7,lave-vaisselle,non,0,4,recent,100,non,matin,pluie,0,oui,manuel,1,non,non,0,oui,robinet
+592,26,homme,amiens,80000,7,10,fort,1,oui,2,oui,7,main,oui,8,4,ancien,0,oui,soir,robinet,30,oui,automatique,4,non,non,0,non,bouteille
+593,31,femme,amiens,80000,7,15,faible,0,oui,3,non,3,main,oui,20,4,recent,0,non,matin,robinet,0,oui,automatique,1,non,non,0,non,bouteille
+594,21,homme,amiens,80000,7,10,moyen,0,oui,1,non,2,main,oui,20,6,recent,0,non,matin,robinet,0,oui,manuel,2,non,non,0,non,robinet
+595,29,femme,paris,75015,7,20,moyen,0,oui,2,oui,3,main,oui,8,10,recent,100,oui,soir,robinet,30,oui,automatique,1,non,non,0,non,robinet
+596,26,homme,MEAULTE,80300,7,5,moyen,0,oui,1,non,21,lave-vaisselle,non,0,8,recent,0,non,matin,robinet,0,oui,manuel,1,non,non,0,oui,robinet
+597,32,homme,CHAULNES,80320,7,10,fort,0,oui,2,non,3,main,oui,6,4,ancien,0,non,matin,robinet,0,oui,automatique,1,non,non,0,oui,robinet
+598,21,homme,paris,75011,7,30,moyen,0,oui,1,oui,7,lave-vaisselle,non,0,3,ancien,0,non,matin,robinet,0,oui,automatique,2,non,non,0,non,robinet
+599,28,femme,Albert,80300,7,15,faible,0,oui,2,non,7,main,oui,24,6,recent,0,non,matin,robinet,0,oui,automatique,2,oui,oui,50,oui,robinet
+600,23,femme,peronne,80200,7,15,moyen,2,oui,2,oui,3,main,oui,10,5,recent,10,oui,journée,pluie,30,oui,automatique,1,non,non,0,non,robinet
+601,26,homme,paris,75018,7,5,fort,0,oui,3,oui,3,main,oui,12,4,recent,100,non,matin,robinet,0,oui,manuel,2,non,non,0,oui,bouteille
+602,24,homme,paris,75011,7,5,moyen,0,oui,1,non,7,lave-vaisselle,non,0,1,recent,1,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+603,19,homme,Albert,80300,7,5,moyen,0,oui,2,oui,3,main,oui,8,2,recent,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,bouteille
+604,22,femme,amiens,80000,14,15,moyen,1,non,2,non,8,lave-vaisselle,non,0,4,recent,0,oui,soir,robinet,16,non,automatique,0,non,non,0,non,bouteille
+605,34,femme,Albert,80300,7,10,moyen,0,oui,2,non,7,lave-vaisselle,non,0,4,ancien,0,non,matin,robinet,0,oui,manuel,1,non,non,0,non,robinet
+606,29,homme,MONTREUIL,93100,7,13,fort,0,oui,2,oui,3,0,non,0,20,ancien,0,oui,soir,robinet,15,non,manuel,1,non,non,0,non,bouteille
+607,40,homme,MONTREUIL,93100,7,3,moyen,0,oui,2,non,7,0,oui,20,4,recent,0,non,matin,robinet,0,oui,automatique,1,non,non,0,non,robinet
+608,41,femme,amiens,80000,7,5,fort,1,oui,3,non,14,0,oui,20,8,ancien,100,non,matin,robinet,0,oui,manuel,2,non,non,0,non,bouteille
+609,45,homme,Albert,80300,7,15,moyen,0,oui,2,oui,14,0,oui,20,4,recent,10,oui,soir,pluie,8,oui,automatique,1,non,non,0,non,bouteille
+610,42,femme,Montreuil,93100,7,15,moyen,0,oui,3,oui,14,0,non,0,4,recent,0,non,matin,robinet,0,non,automatique,0,non,non,0,oui,robinet
+611,43,femme,"Villeneuve en Montagne",71390,7,8,moyen,0,oui,0,oui,3,0,non,0,4,recent,1,oui,soir,pluie,10,oui,manuel,0,non,non,0,non,robinet
+612,44,femme,"Montreuil ",93100,7,25,moyen,0,oui,1,oui,2,0,non,0,4,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+613,56,femme,BRIIS-sous-Forges,91640,7,10,moyen,0,oui,1,oui,3,0,non,0,12,ancien,1,oui,soir,robinet,6,oui,automatique,0,non,non,0,oui,robinet
+614,47,homme,amiens,80000,7,5,moyen,0,oui,2,oui,3,main,oui,20,30,recent,1,non,matin,robinet,0,non,automatique,0,non,non,0,non,bouteille
+615,44,homme,amiens,80000,7,5,fort,0,oui,1,oui,7,main,oui,16,8,ancien,0,non,matin,robinet,0,oui,manuel,2,non,non,0,non,robinet
+616,61,femme,Albert,80300,7,3,moyen,0,oui,2,parfois,7,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,oui,automatique,1,non,non,0,oui,bouteille
+617,47,homme,amiens,80000,7,5,fort,0,oui,2,oui,3,main,oui,20,10,ancien,100,oui,soir,pluie,8,oui,manuel,1,non,non,0,oui,bouteille
+618,51,femme,amiens,80000,7,5,moyen,0,oui,1,oui,14,main,oui,16,4,ancien,100,non,matin,robinet,0,non,automatique,0,non,non,0,oui,robinet
+619,49,homme,albert,80300,7,5,faible,0,oui,2,non,14,lave-vaisselle,non,0,30,recent,0,non,matin,robinet,0,oui,manuel,1,non,non,0,oui,robinet
+620,44,femme,amiens,80000,7,3,moyen,0,oui,2,non,14,main,oui,16,4,recent,1,non,matin,robinet,0,oui,manuel,1,non,non,0,non,robinet
+621,25,femme,amiens,80000,7,5,fort,0,oui,1,non,1,main,non,0,4,recent,100,non,matin,robinet,16,oui,manuel,2,non,non,0,non,robinet
+622,28,homme,Albert,80300,7,10,moyen,0,oui,2,non,14,lave-vaisselle,non,0,10,recent,10,oui,soir,pluie,8,non,automatique,0,non,non,0,non,bouteille
+623,45,homme,Bouzincourt,80300,14,10,moyen,0,oui,2,non,7,main,oui,20,4,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+624,55,femme,amiens,80000,7,15,fort,2,non,3,oui,2,main,oui,16,30,recent,0,oui,matin,pluie,30,oui,automatique,1,non,non,0,non,robinet
+625,44,homme,peronne,80200,7,5,moyen,0,oui,1,non,7,lave-vaisselle,non,0,12,recent,100,non,matin,pluie,0,oui,manuel,1,non,non,0,non,robinet
+626,26,homme,amiens,80000,7,10,moyen,3,oui,2,non,14,main,non,0,20,ancien,101,non,matin,robinet,0,oui,automatique,1,oui,oui,30,oui,robinet
+627,46,femme,amiens,80000,7,10,moyen,0,oui,2,oui,3,main,non,0,8,recent,0,non,matin,robinet,0,oui,manuel,1,non,non,0,non,bouteille
+628,41,femme,montreuil,93100,7,5,moyen,0,oui,2,non,3,main,non,0,4,recent,100,oui,soir,robinet,8,oui,manuel,8,non,non,0,non,bouteille
+629,44,homme,amiens,80000,7,5,fort,0,oui,2,non,7,main,oui,20,6,recent,0,non,matin,robinet,0,oui,automatique,1,non,non,0,oui,robinet
+630,25,homme,Bouzincourt,80300,7,10,moyen,1,non,2,non,14,lave-vaisselle,non,0,4,recent,1,non,matin,robinet,0,oui,automatique,1,non,non,0,non,robinet
+631,39,femme,Albert,80300,7,5,moyen,0,oui,2,non,6,lave-vaisselle,non,0,12,ancien,0,non,matin,robinet,0,oui,automatique,1,non,non,0,non,robinet
+632,54,homme,peronne,80200,7,15,faible,0,oui,1,non,7,main,oui,8,6,ancien,10,oui,matin,robinet,8,oui,automatique,2,non,non,0,oui,robinet
+633,43,homme,amiens,80000,7,10,faible,0,oui,1,oui,14,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,oui,manuel,1,non,non,0,non,bouteille
+634,47,homme,amiens,80000,14,3,moyen,0,oui,2,non,5,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+635,44,femme,amiens,80000,7,5,moyen,0,oui,1,oui,2,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+636,60,homme,paris,75011,7,10,fort,0,oui,1,oui,14,main,oui,8,4,ancien,0,oui,matin,robinet,8,non,automatique,0,oui,non,80,non,robinet
+637,23,homme,peronne,80200,7,25,moyen,0,oui,2,non,7,main,oui,20,4,recent,100,non,matin,robinet,0,non,automatique,0,non,non,0,oui,bouteille
+638,56,femme,MEAULTE,80300,7,10,moyen,0,oui,2,oui,3,main,oui,20,4,recent,110,oui,soir,pluie,6,oui,manuel,1,non,non,0,non,bouteille
+639,51,homme,CHAULNES,80320,7,15,moyen,0,oui,2,parfois,3,main,oui,6,4,recent,100,non,matin,robinet,0,oui,automatique,1,non,non,0,non,robinet
+640,46,femme,Albert,80300,7,25,moyen,0,oui,1,oui,14,lave-vaisselle,non,0,6,recent,100,non,matin,robinet,0,oui,manuel,2,non,non,0,non,robinet
+641,39,homme,amiens,80000,7,10,fort,0,oui,2,non,14,lave-vaisselle,non,0,30,recent,0,non,matin,robinet,0,non,automatique,0,oui,oui,60,oui,robinet
+642,51,homme,amiens,80000,14,15,faible,0,oui,2,non,21,lave-vaisselle,non,0,4,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+643,54,femme,amiens,80000,7,10,faible,0,oui,3,non,14,main,oui,20,30,recent,0,oui,soir,pluie,8,non,automatique,0,non,non,0,non,robinet
+644,43,femme,paris,75015,7,10,moyen,0,oui,2,oui,9,main,non,0,12,recent,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+645,22,femme,MEAULTE,80300,7,15,moyen,2,non,2,oui,7,main,oui,20,20,recent,100,non,matin,robinet,0,non,automatique,0,non,non,0,non,bouteille
+646,42,femme,CHAULNES,80320,7,15,fort,0,oui,2,parfois,3,main,oui,30,4,recent,10,oui,soir,pluie,16,oui,manuel,1,non,non,0,non,robinet
+647,44,homme,paris,75011,7,5,moyen,0,oui,2,oui,3,lave-vaisselle,non,0,4,ancien,0,non,matin,robinet,0,oui,automatique,2,non,non,0,oui,robinet
+648,30,femme,Albert,80300,14,3,moyen,0,oui,1,non,7,main,oui,4,4,recent,0,oui,journée,pluie,6,oui,manuel,2,non,non,0,oui,robinet
+649,50,homme,peronne,80200,7,5,moyen,0,non,2,non,3,main,oui,7,4,recent,0,non,matin,robinet,0,oui,automatique,4,non,non,0,non,bouteille
+650,23,homme,paris,75018,7,10,moyen,0,oui,2,oui,7,lave-vaisselle,non,0,4,recent,100,non,matin,pluie,0,oui,manuel,1,non,non,0,oui,robinet
+651,26,homme,paris,75011,7,10,fort,1,oui,2,oui,7,main,oui,8,4,ancien,0,oui,soir,robinet,30,oui,automatique,4,non,non,0,non,bouteille
+652,40,homme,Albert,80300,7,15,faible,0,oui,3,non,3,main,oui,20,4,recent,0,non,matin,robinet,0,oui,automatique,1,non,non,0,non,bouteille
+653,43,femme,amiens,80000,7,10,moyen,0,oui,1,non,2,main,oui,20,6,recent,0,non,matin,robinet,0,oui,manuel,2,non,non,0,non,robinet
+654,43,homme,Albert,80300,7,20,moyen,0,oui,2,oui,3,main,oui,8,10,recent,100,oui,soir,robinet,30,oui,automatique,1,non,non,0,non,robinet
+655,44,homme,paris,75011,7,12,moyen,0,oui,1,non,21,lave-vaisselle,non,0,8,recent,0,non,matin,robinet,0,oui,manuel,1,non,non,0,oui,robinet
+656,31,femme,MONTREUIL,93100,7,10,fort,0,oui,2,non,3,main,oui,6,4,ancien,0,non,matin,robinet,0,oui,automatique,1,non,non,0,oui,robinet
+657,48,femme,amiens,80000,7,30,moyen,0,oui,1,oui,7,lave-vaisselle,non,0,3,ancien,0,non,matin,robinet,0,oui,automatique,2,non,non,0,non,robinet
+658,24,homme,Albert,80300,7,15,faible,0,oui,2,non,7,main,oui,24,6,recent,0,non,matin,robinet,0,oui,automatique,2,oui,oui,32,oui,robinet
+659,53,homme,Montreuil,93100,7,15,moyen,2,oui,2,oui,3,main,oui,10,5,recent,10,oui,journée,pluie,30,oui,automatique,1,non,non,0,non,robinet
+660,28,femme,"Villeneuve en Montagne",71390,7,5,fort,0,oui,3,oui,3,main,oui,12,4,recent,100,non,matin,robinet,0,oui,manuel,2,non,non,0,oui,bouteille
+661,45,femme,"Montreuil ",93100,7,5,moyen,0,oui,1,non,7,lave-vaisselle,non,0,1,recent,1,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+662,37,femme,MONTREUIL,93100,7,5,moyen,0,oui,2,oui,3,main,oui,8,2,recent,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,bouteille
+663,30,homme,amiens,80000,14,15,moyen,1,oui,2,non,8,lave-vaisselle,non,0,4,recent,0,oui,soir,robinet,16,non,automatique,0,non,non,0,non,bouteille
+664,57,femme,amiens,80000,7,10,moyen,0,non,2,non,7,lave-vaisselle,non,0,4,ancien,0,non,matin,robinet,0,oui,manuel,1,non,non,0,non,robinet
+665,33,homme,amiens,80000,7,10,faible,0,oui,1,oui,14,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,oui,robinet
+666,47,femme,amiens,80000,14,3,moyen,0,oui,2,non,5,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,10,oui,manuel,0,non,non,0,non,robinet
+667,44,homme,amiens,80000,7,5,moyen,0,oui,1,oui,2,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+668,44,femme,amiens,80000,7,10,fort,0,oui,1,oui,14,main,oui,8,4,ancien,0,oui,matin,robinet,6,oui,automatique,0,non,non,0,oui,robinet
+669,58,homme,paris,75016,7,25,moyen,0,oui,2,non,7,main,oui,20,4,recent,100,non,matin,robinet,0,non,automatique,0,non,non,0,non,bouteille
+670,53,femme,"BRAY SUR SOMME",80340,7,10,moyen,0,oui,2,oui,3,main,oui,20,4,recent,110,oui,soir,pluie,0,oui,manuel,2,non,non,0,non,robinet
+671,52,femme,Bouzincourt,80300,9,15,moyen,0,oui,2,parfois,3,main,oui,6,4,recent,100,non,matin,robinet,0,oui,automatique,1,non,non,0,oui,bouteille
+672,48,femme,paris,75017,7,25,moyen,0,oui,1,oui,14,lave-vaisselle,non,0,6,recent,100,non,matin,robinet,8,oui,manuel,1,non,non,0,oui,bouteille
+673,26,homme,paris,75016,7,10,fort,0,oui,2,non,14,lave-vaisselle,non,0,30,recent,0,non,matin,robinet,0,non,automatique,0,non,non,0,oui,robinet
+674,46,homme,peronne,80200,14,15,faible,0,oui,2,non,21,lave-vaisselle,non,0,4,ancien,0,non,matin,robinet,0,oui,manuel,1,non,non,0,oui,robinet
+675,41,homme,amiens,80000,7,10,faible,0,oui,3,non,14,main,oui,20,30,recent,0,oui,soir,pluie,0,oui,manuel,1,non,non,0,non,robinet
+676,56,homme,Albert,80300,7,10,moyen,0,oui,2,oui,9,main,non,0,12,recent,0,non,matin,robinet,16,oui,manuel,2,non,non,0,non,robinet
+677,54,femme,SUZANNE,80340,7,15,moyen,2,non,2,oui,7,main,oui,20,20,recent,100,non,matin,robinet,8,non,automatique,0,non,non,0,non,bouteille
+678,40,homme,paris,75011,7,15,fort,0,oui,2,parfois,3,main,oui,30,4,recent,10,oui,soir,pluie,0,non,automatique,0,non,non,0,non,robinet
+679,55,femme,peronne,80200,7,5,moyen,0,oui,2,oui,3,lave-vaisselle,non,0,4,ancien,0,non,matin,robinet,30,oui,automatique,1,non,non,0,non,robinet
+680,53,homme,MEAULTE,80300,14,3,moyen,0,oui,1,non,7,main,oui,4,4,recent,0,oui,journée,pluie,0,oui,manuel,1,non,non,0,non,robinet
+681,44,homme,CHAULNES,80320,7,5,moyen,0,oui,2,non,3,main,oui,7,4,recent,0,non,matin,robinet,0,oui,automatique,1,oui,oui,38,oui,robinet
+682,32,femme,Albert,80300,7,10,moyen,0,oui,2,oui,7,lave-vaisselle,non,0,4,recent,100,non,matin,pluie,0,oui,manuel,1,non,non,0,non,bouteille
+683,53,homme,MONTREUIL,93100,7,10,fort,0,oui,2,non,3,main,oui,6,4,ancien,0,non,matin,robinet,8,oui,manuel,8,non,non,0,non,bouteille
+684,35,homme,amiens,80000,7,30,moyen,0,oui,1,oui,7,lave-vaisselle,non,0,3,ancien,0,non,matin,robinet,0,oui,automatique,1,non,non,0,oui,robinet
+685,45,femme,Albert,80300,7,15,faible,0,oui,2,non,7,main,oui,24,6,recent,0,non,matin,robinet,0,oui,automatique,1,non,non,0,non,robinet
+686,61,femme,Montreuil,93100,7,15,moyen,2,oui,2,oui,3,main,oui,10,5,recent,10,oui,journée,pluie,0,oui,automatique,1,non,non,0,non,robinet
+687,44,homme,"Villeneuve en Montagne",71390,7,5,fort,0,oui,3,oui,3,main,oui,12,4,recent,100,non,matin,robinet,8,oui,automatique,2,non,non,0,oui,robinet
+688,34,homme,"Montreuil ",93100,7,5,moyen,0,oui,1,non,7,lave-vaisselle,non,0,1,recent,1,non,matin,robinet,0,oui,manuel,1,non,non,0,non,bouteille
+689,46,homme,MONTREUIL,93100,7,5,moyen,0,oui,2,oui,3,main,oui,8,2,recent,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+690,48,homme,albert,80300,7,5,faible,0,oui,2,non,14,lave-vaisselle,non,0,30,recent,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+691,42,homme,amiens,80000,7,3,moyen,0,oui,2,non,14,main,oui,16,4,recent,1,non,matin,robinet,8,non,automatique,0,oui,non,75,non,robinet
+692,49,homme,amiens,80000,7,5,fort,0,oui,1,non,1,main,non,0,4,recent,100,non,matin,robinet,0,non,automatique,0,non,non,0,oui,bouteille
+693,47,femme,Albert,80300,7,10,moyen,0,oui,2,non,14,lave-vaisselle,non,0,10,recent,10,oui,soir,pluie,6,oui,manuel,1,non,non,0,non,bouteille
+694,28,homme,Bouzincourt,80300,14,10,moyen,0,oui,2,non,7,main,oui,20,4,ancien,0,non,matin,robinet,0,oui,automatique,1,non,non,0,non,robinet
+695,52,femme,amiens,80000,7,15,fort,2,non,3,oui,2,main,oui,16,30,recent,0,oui,matin,pluie,0,oui,manuel,2,non,non,0,non,robinet
+696,49,homme,peronne,80200,7,5,moyen,0,oui,1,non,7,lave-vaisselle,non,0,12,recent,100,non,matin,pluie,0,non,automatique,0,oui,oui,54,oui,robinet
+697,27,homme,amiens,80000,7,10,moyen,3,oui,2,non,14,main,non,0,20,ancien,101,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+698,40,homme,amiens,80000,7,5,fort,0,oui,1,oui,7,main,oui,16,8,ancien,0,non,matin,robinet,8,non,automatique,0,non,non,0,non,robinet
+699,57,homme,Albert,80300,7,3,moyen,0,oui,2,parfois,7,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+700,49,femme,amiens,80000,7,5,fort,0,oui,2,oui,3,main,oui,20,10,ancien,100,oui,soir,pluie,0,non,automatique,0,non,non,0,non,bouteille
+701,29,femme,amiens,80000,7,5,moyen,0,oui,1,oui,14,main,oui,16,4,ancien,100,non,matin,robinet,16,oui,manuel,1,non,non,0,non,robinet
+702,32,homme,albert,80300,7,5,faible,0,oui,2,non,14,lave-vaisselle,non,0,30,recent,0,non,matin,robinet,0,oui,automatique,2,non,non,0,oui,robinet
+703,24,homme,amiens,80000,7,3,moyen,0,oui,2,non,14,main,oui,16,4,recent,1,non,matin,robinet,6,oui,manuel,2,non,non,0,oui,robinet
+704,27,femme,amiens,80000,7,5,fort,0,oui,1,non,1,main,non,0,4,recent,100,non,matin,robinet,0,oui,automatique,4,non,non,0,non,bouteille
+705,43,femme,Albert,80300,7,10,moyen,0,oui,2,non,14,lave-vaisselle,non,0,10,recent,10,oui,soir,pluie,0,oui,manuel,1,non,non,0,oui,robinet
+706,54,homme,Bouzincourt,80300,14,10,moyen,0,oui,2,non,7,main,oui,20,4,ancien,0,non,matin,robinet,30,oui,automatique,4,non,non,0,non,bouteille
+707,53,homme,amiens,80000,7,15,fort,2,non,3,oui,2,main,oui,16,30,recent,0,oui,matin,pluie,0,oui,automatique,1,non,non,0,non,bouteille
+708,46,homme,amiens,80000,7,15,fort,2,non,3,oui,2,main,oui,16,30,recent,0,oui,matin,pluie,0,oui,manuel,2,non,non,0,non,robinet
+709,42,homme,peronne,80200,7,5,moyen,0,oui,1,non,7,lave-vaisselle,non,0,12,recent,100,non,matin,pluie,30,oui,automatique,1,non,non,0,non,robinet
+710,58,femme,amiens,80000,7,10,moyen,3,oui,2,non,14,main,non,0,20,ancien,101,non,matin,robinet,0,oui,manuel,1,non,non,0,oui,robinet
+711,46,homme,MONTREUIL,93100,7,5,moyen,0,oui,2,oui,3,main,oui,8,2,recent,0,non,matin,robinet,0,oui,automatique,1,non,non,0,oui,robinet
+712,48,femme,CHAUFFAILLES,71170,5,10,moyen,0,oui,3,oui,16,main,non,0,18,recent,1,oui,soir,pluie,2,oui,manuel,1,non,non,0,oui,bouteille
+713,24,homme,montreuil,93100,7,15,moyen,0,oui,2,parfois,7,lave-vaisselle,non,0,8,ancien,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+714,60,femme,"Bures sur Yvette ",91940,7,6,moyen,0,oui,3,oui,4,lave-vaisselle,non,0,12,recent,11,oui,soir,pluie,3,oui,automatique,0,non,non,0,oui,robinet
+715,23,homme,"Bures sur Yvette",91440,7,8,moyen,0,oui,2,oui,3,lave-vaisselle,non,0,6,recent,11,oui,soir,robinet,4,non,automatique,0,non,non,0,non,robinet
+716,21,femme,Dijon,21000,5,12,moyen,0,oui,1,oui,7,lave-vaisselle,non,0,0,recent,10,oui,soir,pluie,30,oui,automatique,0,non,non,0,non,robinet
+717,27,femme,CLUNY,71250,9,4,faible,0,oui,3,oui,17,main,non,0,15,recent,100,oui,soir,robinet,5,oui,manuel,0,non,non,0,oui,robinet
+718,26,femme,Jaux,60880,7,10,moyen,0,oui,2,oui,16,main,oui,15,30,recent,110,oui,soir,pluie,4,oui,automatique,0,non,non,0,oui,bouteille
+719,59,femme,Dijon,21000,4,10,fort,0,oui,2,parfois,8,main,non,0,5,ancien,10,oui,matin,pluie,0,oui,automatique,1,non,non,0,oui,robinet
+721,49,femme,geispolsheim,67118,3,5,faible,0,oui,2,oui,2,lave-vaisselle,non,0,7,recent,110,oui,soir,pluie,0,oui,manuel,0,non,non,0,oui,robinet
+722,22,homme,Champs-sur-Marne,77420,9,20,moyen,2,non,2,oui,3,main,oui,40,2,recent,0,oui,journÃ©e,robinet,4,non,automatique,0,non,non,0,non,robinet
+723,15,homme,"Berre l'Ã©tang",13130,7,10,faible,0,oui,2,oui,0,lave-vaisselle,non,0,16,recent,100,oui,soir,robinet,5,non,automatique,0,non,non,0,oui,robinet
+724,53,femme,"Genelard ",71300,7,4,moyen,0,oui,2,oui,5,lave-vaisselle,non,0,20,ancien,101,oui,soir,pluie,3,oui,manuel,2,non,non,0,oui,robinet
+725,22,homme,Suresnes,92150,14,10,moyen,0,oui,2,oui,7,main,non,0,20,ancien,0,oui,journÃ©e,robinet,2,oui,manuel,1,non,non,0,oui,bouteille
+726,19,homme,Vitrolles,13127,7,15,moyen,0,oui,2,oui,14,main,non,0,31,recent,0,oui,soir,robinet,15,oui,automatique,1,non,non,0,oui,bouteille
+727,23,homme,"Choisy le roi",94600,4,25,moyen,0,oui,2,oui,0,main,non,0,0,recent,100,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+728,54,homme,"Chartres de Bretagne",35131,4,10,moyen,0,oui,1,oui,7,lave-vaisselle,non,0,5,ancien,111,oui,soir,pluie,8,oui,automatique,0,non,non,0,oui,robinet
+729,55,femme,"Chartres de Bretagne",35131,4,15,moyen,0,oui,2,oui,2,lave-vaisselle,non,0,7,ancien,111,oui,soir,pluie,10,oui,automatique,0,non,non,0,non,robinet
+730,28,homme,"Drancy ",93700,5,10,moyen,0,oui,2,oui,15,main,non,0,3,ancien,1,non,matin,robinet,0,non,automatique,0,non,non,0,non,robinet
+731,57,homme,Drancy,93700,7,10,fort,0,oui,2,oui,3,lave-vaisselle,non,0,20,recent,101,oui,soir,robinet,2,oui,automatique,1,non,non,0,oui,robinet
+732,26,femme,Reims,51100,9,10,moyen,0,oui,2,parfois,12,main,oui,2,9,ancien,100,non,matin,robinet,0,non,automatique,0,non,non,0,oui,robinet
+733,16,femme,"Argenteuil ",95100,12,13,moyen,0,oui,3,oui,6,main,non,0,4,ancien,0,non,matin,robinet,0,oui,automatique,3,non,non,0,non,robinet
+734,25,femme,Paris,75013,14,15,moyen,2,oui,2,oui,3,main,oui,10,15,recent,0,non,matin,robinet,0,non,automatique,0,non,non,0,oui,robinet
+735,29,femme,Villetaneuse,93430,14,20,faible,1211,oui,3,oui,14,main,non,0,7,ancien,100,non,matin,robinet,0,non,automatique,0,non,non,0,oui,bouteille
+736,24,femme,"Arcueil ",94110,8,15,moyen,0,oui,2,parfois,7,main,oui,10,1,recent,0,non,matin,robinet,0,non,automatique,0,non,non,0,non,bouteille
+737,16,femme,Paris,75013,14,5,moyen,0,oui,2,oui,14,main,non,0,10,recent,0,non,matin,robinet,0,non,automatique,0,non,non,0,oui,robinet
+738,25,femme,"Paris ",75020,2,50,moyen,10,oui,2,parfois,10,main,non,0,0,ancien,0,non,matin,robinet,0,oui,automatique,3,non,non,0,oui,bouteille
+739,35,femme,"Chatillon ",92320,14,7,moyen,0,oui,2,oui,8,lave-vaisselle,non,0,30,recent,0,non,matin,robinet,0,oui,manuel,1,non,non,0,oui,bouteille
+740,22,homme,Villepinte,93420,7,12,moyen,0,oui,2,oui,21,main,non,0,16,recent,110,oui,soir,robinet,10,oui,manuel,0,non,non,0,oui,bouteille
+741,36,homme,Antony,92160,5,10,moyen,0,oui,1,oui,14,main,oui,4,16,recent,100,non,matin,robinet,0,non,automatique,0,non,non,0,non,bouteille
