@@ -229,10 +229,29 @@ if($tmp["piscine"] = "oui"){
 }
 
 //conso
-$conso = ($consoDouche * 52) + ($consoBain * 52) + ($consoDents * 365) + ($consoVaisselle * 52) + ($consoMal * 12) + ($consoVoiture * 12) + $consoPiscine;
+$consoDouche = ($consoDouche * 52) ;
+$consoBain = ($consoBain * 52) ;
+$consoDents = ($consoDents * 365) ;
+$consoVaisselle = ($consoVaisselle * 52) ;
+$consoMal = ($consoMal * 12) ;
+$consoVoiture = ($consoVoiture * 12) ;
+$conso = $consoDouche + $consoBain + $consoDents + $consoVaisselle + $consoMal + $consoVoiture + $consoPiscine;
 
 //eco
-$eco 
+$ecoDouche = $consoDouche - (5*12*7*52);
+$ecoBain = $consoBain;
+$ecoDents = $consoDents - 4*365;
+$ecoVaisselle = 0;
+if($tmp["choixVaisselle"] == "main"){$ecoVaisselle = $consoVaisselle - 3650;}
+$ecoMal = $consoMal - ($tmp["freqMal"] * 50)*12;
+$ecoVoiture = 0;
+if($tmp["voiture"] == "oui"){$ecoVoiture = $consoVoiture - (60 * 12);}
+$ecoPiscine = 0;
+if($tmp["piscine"] == "oui"){$ecoPiscine = $consoPiscine - $tmp["volumePiscine"] * 250;}
+
+$eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture + $ecoPiscine;
+
+
 
 
 
