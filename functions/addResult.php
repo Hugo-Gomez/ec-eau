@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once './connection.php';
 require_once './getResult.php';
 function addResult($conn,$mail,$age,$sexe,$ville,$cp,$freqDouche,$tempsDouche,$debitDouche,$freqBain,$rempBain,$freqDents,$eauDents,$freqVaisselle,$choixVaisselle,$methVaisselle,$couvVaisselle,$freqMal,$dateMal,$ecoeau,$plante,$momentPlante,$eauPlante,$freqPlante,$voiture,$methVoiture,$freqVoiture,$piscine,$freqPiscine,$volumePiscine,$etiquette,$bouteille){
@@ -161,5 +162,6 @@ addResult(
     $_POST['q10'],
     $_POST['q11']
 );
+$_SESSION["mail"] = $_POST["email"];
 header('location:/valid_form.php');
 }
