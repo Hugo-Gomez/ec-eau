@@ -94,8 +94,8 @@ foreach ($res as $row) {
     $piNon ++;
   }
 }
-$pctPiOui = ($piOui / $piHeight) * 100;
-$pctPiNon = ($piNon / $piHeight) * 100;
+$pctPiOui = ($piOui / $height) * 100;
+$pctPiNon = ($piNon / $height) * 100;
 //echo "<!-- Piscine :".$piOui." ".$piNon."-->";
 //echo "<!-- Piscine pct :".$pctPiOui." ".$pctPiNon."-->";
 
