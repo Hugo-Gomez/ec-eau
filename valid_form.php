@@ -68,8 +68,7 @@ $csEco2 = 0;//recuperateur
 $csEco3 = 0;//chasse
 $csPlante1 = 0;//arroser le soir
 $csPlante2 = 0;//preferer l'eau de pluie
-$csVoiture1 = 0;//eviter par forte chaleur
-$csVoiture2 = 0;//lavage auto
+$csVoiture1 = 0;//lavage auto
 $csPiscine1 = 0;// 1/4 remplissage /an
 $csEtiquette1 = 0;//check ettiquette
 $csBouteille1 = 0;// eau du robinet
@@ -141,9 +140,8 @@ if($tmp["plante"] == "oui"){
 
 //voiture
 if($tmp["voiture"] == "oui"){
-  $csVoiture1 = 1;
   if($tmp["methVoiture"] == "manuel"){
-    $csVoiture2 = 1;
+    $csVoiture1 = 1;
   }
 }
 
@@ -238,7 +236,7 @@ $consoVoiture = ($consoVoiture * 12) ;
 $conso = $consoDouche + $consoBain + $consoDents + $consoVaisselle + $consoMal + $consoVoiture + $consoPiscine;
 
 //eco
-$ecoDouche = $consoDouche - (5*12*7*52);
+$ecoDouche = $consoDouche - (5*12*$tmp["freqDouche"]*52);
 $ecoBain = $consoBain;
 $ecoDents = $consoDents - 4*365;
 $ecoVaisselle = 0;
@@ -270,7 +268,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center">
-            <h1 class="mb-3 bread">Les conseils person</h1>
+            <h1 class="mb-3 bread">Les conseils personnel</h1>
           </div>
         </div>
       </div>
@@ -281,139 +279,241 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
         <div class="row no-gutters">
           <div class="col-md-4 ftco-animate py-5 nav-link-wrap">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            
+            <?php
+              //$csDouche1 = 0;$csDouche2 = 0;$csDouche3 = 0;
+              if ($csDouche1 == 1 || $csDouche2 == 1 || $csDouche3 == 1){
+            ?>
               <a class="nav-link px-4 active" id="v-pills-master-tab" data-toggle="pill" href="#v-pills-master" role="tab" aria-controls="v-pills-master" aria-selected="true"><i class="fas fa-shower"></i> Douche</a>
-
+            <?php
+              }
+              if ($csBain1 == 1 || $csBain2 == 1){
+            ?>
               <a class="nav-link px-4" id="v-pills-bath-tab" data-toggle="pill" href="#v-pills-bath" role="tab" aria-controls="v-pills-bath" aria-selected="false"><i class="fas fa-bath"></i>Bain</a>
-
+              <?php
+              }
+              if ($csDent1 == 1){
+            ?>
               <a class="nav-link px-4" id="v-pills-dish-tab" data-toggle="pill" href="#v-pills-dish" role="tab" aria-controls="v-pills-dish" aria-selected="false"><i class="fas fa-tooth"></i> Dents</a>
-
+              <?php
+              }
+              if ($csVaisselle1 == 1 || $csVaisselle2 == 1 || $csVaisselle3 == 1){
+            ?>
               <a class="nav-link px-4" id="v-pills-clothes-tab" data-toggle="pill" href="#v-pills-clothes" role="tab" aria-controls="v-pills-clothes" aria-selected="false"><i class="fas fa-utensils"></i> Vaisselle</a>
-
+              <?php
+              }
+              if ($csMAL1 == 1){
+            ?>
               <a class="nav-link px-4" id="v-pills-garden-tab" data-toggle="pill" href="#v-pills-garden" role="tab" aria-controls="v-pills-garden" aria-selected="false"><i class="fab fa-500px"></i> Machine à laver</a>
-
+              <?php
+              }
+              if ($csEco1 == 1 || $csEco2 == 1 || $csEco3 == 1){
+            ?>
               <a class="nav-link px-4" id="v-pills-pagelines-tab" data-toggle="pill" href="#v-pills-pagelines" role="tab" aria-controls="v-pills-pagelines" aria-selected="false"><i class="fas fa-check"></i> Economiseur</a>
-
+              <?php
+              }
+              if ($csPlante1 == 1 || $csPlante2 == 1){
+            ?>
               <a class="nav-link px-4" id="v-pills-drink-tab" data-toggle="pill" href="#v-pills-drink" role="tab" aria-controls="v-pills-drink" aria-selected="false"><i class="fas fa-leaf"></i> Plantes</a>
-             
+              <?php
+              }
+              if ($csVoiture1 == 1){
+            ?>
               <a class="nav-link px-4" id="v-pills-car-tab" data-toggle="pill" href="#v-pills-car" role="tab" aria-controls="v-pills-swimmer" aria-selected="false"><i class="fas fa-car"></i> Voiture</a>
-
+              <?php
+              }
+              if ($csPiscine1 == 1){
+            ?>
               <a class="nav-link px-4" id="v-pills-swimmer-tab" data-toggle="pill" href="#v-pills-swimmer" role="tab" aria-controls="v-pills-swimmer" aria-selected="false"><i class="fas fa-swimmer"></i> Piscine</a>
-
+              <?php
+              }
+              if ($csEtiquette1 == 1){
+            ?>
               <a class="nav-link px-4" id="v-pills-sticky-note-tab" data-toggle="pill" href="#v-pills-sticky-note" role="tab" aria-controls="v-pills-sticky-note" aria-selected="false"><i class="fas fa-sticky-note"></i> Etiquettes</a>
-
+              <?php
+              }
+              if ($csBouteille1 == 1){
+            ?>
               <a class="nav-link px-4" id="v-pills-wine-bottle-tab" data-toggle="pill" href="#v-pills-wine-bottle" role="tab" aria-controls="v-pills-wine-bottle" aria-selected="false"><i class="fas fa-wine-bottle"></i> Bouteilles</a>
+              <?php
+              }
+            ?>
             </div>
           </div>
           <div class="col-md-8 ftco-animate p-4 p-md-5 d-flex align-items-center">
 
             <div class="tab-content pl-md-5" id="v-pills-tabContent">
-
               <div class="tab-pane fade show active py-5" id="v-pills-master" role="tabpanel" aria-labelledby="v-pills-master-tab">
                 <i class="icon mb-3 d-block fas fa-shower"></i>
                 <h2 class="mb-4">Douche</h2>
-                <p>Un bain consomme plus de 100 litres d’eau. Une douche est plus économique, sauf si on traîne un peu sous l'eau mais 10 minutes de douche peuvent consommer plus d’eau qu’un bain.
-</p>
-<p>On peut penser à :</p>
-<ul>
-  <li>Recycler l’eau de la douche</li>
-  <li>Utiliser des pommeaux de douche munis du label 'energy' ( moins de 12 L par minute), des réducteurs de débits, stop-douche...</li>
-</ul>
+                <?php
+                if ($csDouche1 == 1){
+                ?>
+                <p>- Pensez à installer des pommeaux de douche munis du label ‘energy’, des réducteurs de débits et des stop-douche.</p>
+                <?php
+                }
+                if ($csDouche2 == 1){
+                ?>
+                <p>- Il est préférable de couper l’eau lors du savonnage pour éviter une consommation excessive sous la douche.</p>
+                <?php
+                }
+                if ($csDouche3 == 1){
+                ?>
+                <p>- Une douche optimale ne dépasse pas les 5 minutes. La consommation d’eau sera alors drastiquement réduite.</p>
+                <?php
+                }
+                ?>
               </div>
 
               <div class="tab-pane fade py-5" id="v-pills-bath" role="tabpanel" aria-labelledby="v-pills-bath-tab">
                 <i class="icon mb-3 d-block fas fa-bath"></i>
                 <h2 class="mb-4">Bain</h2>
-                <p>Il est préférable de se rincer avec un verre à dents (10 000 litres d'eau gaspillés par an) ou bien de couper son robinet en se brossant les dents fait également partie des écogestes basiques à mettre en place chez soi.
-</p>
+                <?php
+                if ($csBain1 == 1){
+                ?>
+                <p>- Prendre un bain consomme plus du double d’eau qu’une douche. Préférez donc la douche au bain.</p>
+                <?php
+                }
+                if ($csBain2 == 1){
+                ?>
+                <p>- Si vous prenez un bain, il n’est pas nécessaire de remplir complètement la baignoire. La moitié est suffisante.</p>
+                <?php
+                }
+                ?>
                </div>
 
               <div class="tab-pane fade py-5" id="v-pills-dish" role="tabpanel" aria-labelledby="v-pills-dish-tab">
                 <i class="icon mb-3 d-block fas fa-tooth"></i>
                 <h2 class="mb-4">Dents</h2>
-                <p>Si on fait la vaisselle à la main, il est plus économe de remplir les deux bacs de l’évier (laisser couler l'eau consomme jusqu'à 200 litres par vaisselle).
-</p>
-<p>Pour une quantité assez importante de vaisselle, l’utilisation d’un lave vaisselle consomme donc en général moins d’eau qu’un lavage à la main. Si la vaisselle ne remplit pas la machine, il est préférable de la laver à la main.
-</p>
-<p>Si vous optez pour un lave-vaisselle, regardez bien les étiquettes énergétiques qui indiquent la consommation d’eau et achetez des appareils supérieur à la classe A.</p>
+                <?php
+                if ($csDent1 == 1){
+                ?>
+                <p>- Lors du brossage des dents, il est primordial de couper l’eau. La consommation peut passer de 2 litres d’eau à 36 litres pour un brossage de 3 minutes en laissant couler l’eau.</p>
+                <?php
+                }
+                ?>
                  </div>
 
               <div class="tab-pane fade py-5" id="v-pills-clothes" role="tabpanel" aria-labelledby="v-pills-clothes-tab">
                 <i class="icon mb-3 d-block fas fa-utensils"></i>
                 <h2 class="mb-4">Vaisselle</h2>
-                <p>Sur les machines qui ne disposent pas la technologie de la reconnaissance du poids du linge, veillez à remplir suffisamment de linge avant de lancer le cycle. Profitez également de la fonction cycle court, ou demi-charge, si votre lave-linge le permet.</p>
+                <?php
+                if ($csVaisselle1 == 1){
+                ?>
+                <p>- En cas de lavage à la main, privilégiez l’utilisation d’un bac pour le rinçage afin de ne pas laisser couler l’eau.</p>
+                <?php
+                }
+                if ($csVaisselle2 == 1){
+                ?>
+                <p>- Pour une quantité assez importante de vaisselle, l’utilisation d’un lave vaisselle consomme moins d’eau qu’un lavage à la main. Vous ferez donc des économies d’eau.</p>
+                <?php
+                }
+                if ($csVaisselle3 == 1){
+                ?>
+                <p>- Préférez mettre en marche un lave-vaisselle lorsqu’il est plein. Si la vaisselle ne remplit pas la machine et qu’il y a peu de pièce, il est préférable de la laver à la main.</p>
+                <?php
+                }
+                ?>
                 </div>
 
               <div class="tab-pane fade py-5" id="v-pills-garden" role="tabpanel" aria-labelledby="v-pills-garden-tab">
                 <i class="icon mb-3 d-block fab fa-500px"></i>
                 <h2 class="mb-4">Machine à laver</h2>
-                <ul>
-  <li>Remplacer le tuyau d'arrosage par un arrosoir ;
-</li>
-  <li>Arroser moins souvent mais plus longtemps pour que la terre s'humidifie en profondeur. L'arrosage rotatif par jets alternatifs permet un arrosage « doux » sur une longue période.
-</li>
-<li>Veiller à ce que le sol soit assez meuble et travaillé. Cela permet un arrosage plus efficace. En effet, l'eau ruisselle sur un sol tassé ;
-</li>
-<li>Au potager ou dans les plates-bandes, recouvrir le sol entre les plantes de paille, tontes de pelouse, feuilles, etc. favorise la rétention de l'eau ;
-</li>
-<li>Arroser le soir, pour éviter les gaspillages dus à l'évaporation (il fait plus chaud en journée) et l'évapotranspiration (rejet de vapeur par les plantes).
-</li>
-</ul>
+                <?php
+                if ($csMAL1 == 1){
+                ?>
+                <p>- Il est important de vérifier l’étiquette énergétique de votre lave-linge. Si la note indiquée est inférieure à A, considérez un </p>
+                <?php
+                }
+                ?>
                 </div>
 
               <div class="tab-pane fade py-5" id="v-pills-pagelines" role="tabpanel" aria-labelledby="v-pills-pagelines-tab">
                 <i class="icon mb-3 d-block fas fa-check"></i>
                 <h2 class="mb-4">Economiseur</h2>
-                <p>Laver la voiture en station et non chez-soi. En plus d’être souillée par les graisses et hydrocarbures, l’eau utilisée est de 3 fois supérieur à celle utilisée dans une station de nettoyage haute pression.</p>
+                <?php
+                if ($csEco1 == 1){
+                ?>
+                <p>- Les mitigeurs sont une solution simple et économique pour réduire efficacement la consommation d’eau de vos robinets sans modifier leur pression à la sortie.</p>
+                <?php
+                }
+                if ($csEco2 == 1){
+                ?>
+                <p>- Si vous avez la place, installer un récupérateur d’eau de pluie limitera votre consommation d’eau notamment pour les tâches ne nécessitant pas d’eau potable.</p>
+                <?php
+                }
+                if ($csEco3 == 1){
+                ?>
+                <p>- Les toilettes sont une des plus grandes sources de consommation d’eau au quotidien. Il est difficile de diminuer son utilisation, cependant les chasses d’eau économes sont un moyen efficace de diminuer cette consommation. (La consommation d’eau peut être divisé par 2 voir 3).</p>
+                <?php
+                }
+                ?>
                 </div>
 
                 <div class="tab-pane fade py-5" id="v-pills-drink" role="tabpanel" aria-labelledby="v-pills-drink-tab">
                 <i class="icon mb-3 d-block fas fa-leaf"></i>
                 <h2 class="mb-4">Plantes</h2>
-                <p>Selon 
-                <a target="_blank" style ="text-decoration: underline;" href="https://www.quechoisir.org/guide-d-achat-quelle-eau-boire-n4855/">UFC-Que Choisir</a>, si vous habitez dans les moyennes et grandes villes, il vaut mieux privilégier l’eau du robinet, plus écologique et moins chère que celle en bouteille[19]. La qualité de l’eau potable de sa commune peut être vérifier grâce à la carte du ministère des Solidarités et de la Santé en cliquant sur ce <a target="_blank" style ="text-decoration: underline;" href="https://solidarites-sante.gouv.fr/sante-et-environnement/eaux/article/qualite-de-l-eau-potable">lien.</a></p>
-                <p>
-                <a target="_blank" style ="text-decoration: underline;" href="https://www.linfodurable.fr/conso/eau-en-bouteille-eau-du-robinet-laquelle-choisir-2834
-">L’UFC-Que Choisir</a> recommande aux personnes souhaitant tout de même en utiliser de remplacer régulièrement la cartouche, de conserver la carafe filtrante et son eau en réfrigérateur et de consommer l’eau filtrée rapidement, idéalement dans les 24 heures après filtration.</p>
+                <?php
+                if ($csPlante1 == 1){
+                ?>
+                <p>- Arroser le soir permet d’éviter les gaspillages dus à l'évaporation car il fait plus chaud en journée et c’est à ce moment là qu’a lieu l'évapotranspiration (rejet de vapeur par les plantes).</p>
+                <?php
+                }
+                if ($csPlante2 == 1){
+                ?>
+                <p>- L’utilisation d’eau de pluie permet de ne plus consommer d’eau potable pour arroser ses plantes. Le plus simple pour stocker l’eau de plus est l’installation d’un récupérateur d’eau de pluie.</p>
+                <?php
+                }
+                ?>
               </div>
 
               <div class="tab-pane fade py-5" id="v-pills-car" role="tabpanel" aria-labelledby="v-pills-drink-tab">
                 <i class="icon mb-3 d-block fas fa-car"></i>
                 <h2 class="mb-4">Voiture</h2>
-                <ul>
-                <li>
-                Bâcher la piscine pour limiter l’évaporation.</li>
-                <li>Changer ¼ du volume d’eau annuellement. Pour plus d'informations, <a target="_blank" style ="text-decoration: underline;" href="https://www.sa-piscine.com/cout-annuel-eau">cliquez ici.</a></li>
-                </ul>
+                <?php
+                if ($csVoiture1 == 1){
+                ?>
+                <p>- Un lavage au tuyau d’arrosage chez soi consomme beaucoup plus d’eau qu’un lavage automatique en station. Préférez alors cette option qui permet de consommer 10 fois moins d’eau.</p>
+                <?php
+                }
+                ?>
                 </div>
 
                 
                 <div class="tab-pane fade py-5" id="v-pills-swimmer" role="tabpanel" aria-labelledby="v-pills-drink-tab">
                 <i class="icon mb-3 d-block fas fa-swimmer"></i>
                 <h2 class="mb-4">Piscine</h2>
-                <ul>
-                <li>
-                Bâcher la piscine pour limiter l’évaporation.</li>
-                <li>Changer ¼ du volume d’eau annuellement. Pour plus d'informations, <a target="_blank" style ="text-decoration: underline;" href="https://www.sa-piscine.com/cout-annuel-eau">cliquez ici.</a></li>
-                </ul>
+                <?php
+                if ($csPiscine1 == 1){
+                ?>
+                <p>- Si vous avez une piscine, votre consommation d’eau annuelle est drastiquement augmenté. Cependant, pour limiter cela, pensez à bâcher la piscine pour limiter l’évaporation et changer seulement un quart du volume d’eau annuellement.</p>
+                <?php
+                }
+                ?>
                 </div>
+
                 <div class="tab-pane fade py-5" id="v-pills-sticky-note" role="tabpanel" aria-labelledby="v-pills-drink-tab">
                 <i class="icon mb-3 d-block fas fa-sticky-note"></i>
                 <h2 class="mb-4">Etiquettes</h2>
-                <ul>
-                <li>
-                Bâcher la piscine pour limiter l’évaporation.</li>
-                <li>Changer ¼ du volume d’eau annuellement. Pour plus d'informations, <a target="_blank" style ="text-decoration: underline;" href="https://www.sa-piscine.com/cout-annuel-eau">cliquez ici.</a></li>
-                </ul>
+                <?php
+                if ($csEtiquette1 == 1){
+                ?>
+                <p>- Vérifier l’étiquetage énergétique sur vos appareils est un réflexe économique et écologique à avoir. Il vous informe sur la consommation énergétique (notamment la consommation d’eau) de vos appareils électriques afin de faciliter le choix entre différents modèles.</p>
+                <?php
+                }
+                ?>
                 </div>
 
                 <div class="tab-pane fade py-5" id="v-pills-wine-bottle" role="tabpanel" aria-labelledby="v-pills-wine-bottle-tab">
                 <i class="icon mb-3 d-block fas fa-wine-bottle"></i>
                 <h2 class="mb-4">Bouteilles</h2>
-                <ul>
-                <li>
-                Bâcher la piscine pour limiter l’évaporation.</li>
-                <li>Changer ¼ du volume d’eau annuellement. Pour plus d'informations, <a target="_blank" style ="text-decoration: underline;" href="https://www.sa-piscine.com/cout-annuel-eau">cliquez ici.</a></li>
-                </ul>
+                <?php
+                if ($csBouteille1 == 1){
+                ?>
+                <p>- Boire de l’eau en bouteille est économiquement plus cher que boire de l’eau du robinet. L’eau en bouteille a aussi un impact écologique plus fort à cause de l’embouteillage plastique et de la logistique. Il existe en plus des solutions abordables pour filtrer l’eau du robinet afin de supprimer certaines particules comme le calcaire ou le plomb</p>
+                <?php
+                }
+                ?>
                 </div>
                 
             </div>
@@ -427,17 +527,25 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-            <h2 class="mb-4">Quelques chiffres sur</h2>
-            <span class="subheading">La consommation d'eau en France sont ..</span>
+            <h2 class="mb-4">Votre consommation d'eau par ans</h2>
+            <span class="subheading"></span>
           </div>
         </div>
     		<div class="row justify-content-center">
     			<div class="col-md-10">
 		    		<div class="row">
+		          <div class="col-md-12 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number total" data-number="<?=$conso*0.003?>"><?=$conso*0.003?></strong>
+		                <span>Consommations en euros </span>
+		              </div>
+		            </div>
+		          </div>
 		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="150">150</strong>
+		                <strong class="number" data-number="<?=$conso;?>"><?=$conso;?></strong>
 		                <span>Consommations en litres</span>
 		              </div>
 		            </div>
@@ -445,7 +553,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
 		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="20">0</strong>
+		                <strong class="number" data-number="<?=$eco?>"><?=$eco?></strong>
 		                <span>Economies possible en litres</span>
 		              </div>
 		            </div>
@@ -453,7 +561,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
 		          <div class="col-md-12 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number total" data-number="175">0</strong>
+		                <strong class="number total" data-number="<?=$eco*0.003?>"><?=$eco*0.003?></strong>
 		                <span>Economies possible en euros </span>
 		              </div>
 		            </div>
