@@ -76,7 +76,7 @@ if($tmp["debitDouche"] == "fort"){
 }elseif($tmp["debitDouche"] == "moyen"){
   $csDouche1 = 1;
 }
-if($tmp["tempsDouche"] > 15){
+if($tmp["tempsDouche"] > 10){
   $csDouche3 = 1;
 }
 //echo "<!--".$csDouche1." ".$csDouche2."-->";
