@@ -388,7 +388,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                 <?php
                 if ($csMAL1 == 1){
                 ?>
-                <p>- Il est important de vérifier l’étiquette énergétique de votre lave-linge. Si la note indiquée est inférieure à A, considérez un </p>
+                <p>- Il est important de vérifier l’étiquette énergétique de votre lave-linge. Si la note indiquée est inférieure à A, considérez un remplacement de votre lave-linge pour un appareil plus économique (et écologique !)</p>
                 <?php
                 }
                 ?>
@@ -476,7 +476,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                 <?php
                 if ($csBouteille1 == 1){
                 ?>
-                <p>- Boire de l’eau en bouteille est économiquement plus cher que boire de l’eau du robinet. L’eau en bouteille a aussi un impact écologique plus fort à cause de l’embouteillage plastique et de la logistique. Il existe en plus des solutions abordables pour filtrer l’eau du robinet afin de supprimer certaines particules comme le calcaire ou le plomb</p>
+                <p>- Boire de l’eau en bouteille est économiquement plus cher que boire de l’eau du robinet. L’eau en bouteille a aussi un impact écologique plus fort à cause de l’embouteillage plastique et de la logistique. Il existe en plus des solutions abordables pour filtrer l’eau du robinet afin de supprimer certaines particules comme le calcaire ou le plomb.</p>
                 <?php
                 }
                 ?>
@@ -490,16 +490,16 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                   <th>
                   </th>
                   <th>
-                    consommation (en L/an)
+                    Consommation (en L/an)
                   </th>
                   <th>
-                    consommation (en €/an)
+                    Consommation (en €/an)
                   </th>
                   <th>
-                    économie possible (en L/an)
+                    Économie possible (en L/an)
                   </th>
                   <th>
-                    économie possible (en €/an)
+                    Économie possible (en €/an)
                   </th>
                   <tr>
                     <td>
@@ -671,7 +671,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number total" data-number="<?=$conso*0.003?>"><?=$conso*0.003?></strong>
-		                <span>Consommations en euros </span>
+		                <span>Consommation en euros </span>
 		              </div>
 		            </div>
 		          </div>
@@ -679,7 +679,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number" data-number="<?=$conso;?>"><?=$conso;?></strong>
-		                <span>Consommations en litres</span>
+		                <span>Consommation en litres</span>
 		              </div>
 		            </div>
 		          </div>
@@ -687,7 +687,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number" data-number="<?=$eco?>"><?=$eco?></strong>
-		                <span>Economies possible en litres</span>
+		                <span>Économie possible en litres</span>
 		              </div>
 		            </div>
 		          </div>
@@ -695,7 +695,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
 		            <div class="block-18 text-center">
 		              <div class="text">
 		                <strong class="number total" data-number="<?=$eco*0.003?>"><?=$eco*0.003?></strong>
-		                <span>Economies possible en euros </span>
+		                <span>Économie possible en euros </span>
 		              </div>
 		            </div>
 		          </div>
