@@ -85,7 +85,7 @@ $pctPPluie = ($pPluie / $pHeight) * 100;
 //piscine
 $piOui = 0;
 $piNon = 0;
-$piHeight = 0; 
+$piHeight = 0;
 foreach ($res as $row) {
   if($row["piscine"] == "oui"){
     $piHeight ++;
@@ -147,7 +147,7 @@ $MAL = [$MalRecent,$MalAncien];
 $plante = [$pRobinet,$pPluie];
 $pctPlante = [round($pctPRobinet),round($pctPPluie)];
 
-$piscine = [$piNon,$piOui];
+$piscine = [$piOui,$piNon];
 $pctPiscine = [round($pctPiOui),round($pctPiNon)];
 
 $etiquette = [$etOui,$etNon];
@@ -192,7 +192,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
       <div class="row justify-content-center mb-5 pb-3">
         <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
           <h2 class="mb-4">Premier aperçu</h2>
-          <span class="subheading">Selon notre test..</span>
+          <span class="subheading">Selon notre test parmi la population sondé..</span>
         </div>
       </div>
       <div class="row justify-content-center">
@@ -201,32 +201,32 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
             <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
               <div class="block-18 text-center">
                 <div class="text">
-                  <strong class="number" data-number="60">0</strong><strong class="white-text">%</strong>
-                  <span>des Français ont un lave vaiselle</span>
+                  <strong class="number" data-number="<?= round($pctBainOui) ?>">0</strong><strong class="white-text">%</strong>
+                  <span>prend au moins un bain une fois par semaine</span>
                 </div>
               </div>
             </div>
             <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
               <div class="block-18 text-center">
                 <div class="text">
-                  <strong class="number" data-number="7">0</strong>
-                  <span>douches par semaines en moyenne pour une personne</span>
+                  <strong class="number" data-number="<?= round($pctVOui) ?>">0</strong><strong class="white-text">%</strong>
+                  <span> des personnes faisant la vaisselle à la main laisse l'eau couler</span>
                 </div>
               </div>
             </div>
             <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
               <div class="block-18 text-center">
                 <div class="text">
-                  <strong class="number" data-number="5">0</strong><strong class="white-text">%</strong>
-                  <span>des Français ont une piscine chez eux</span>
+                  <strong class="number" data-number="<?= round($pctEtNon) ?>">0</strong><strong class="white-text">%</strong>
+                  <span>ne font pas attention aux étiquettes énergétiques à l'achat d'un bien électroménager</span>
                 </div>
               </div>
             </div>
             <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
               <div class="block-18 text-center">
                 <div class="text">
-                  <strong class="number" data-number="2">0</strong>
-                  <span>lavage de voiture par mois en moyenne pour une personne véhiculée</span>
+                  <strong class="number" data-number="<?= round($pctBoOui) ?>">0</strong><strong class="white-text">%</strong>
+                  <span>consomme de l'eau en bouteille</span>
                 </div>
               </div>
             </div>
@@ -242,9 +242,11 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
           <h2 class="title">Douche</h2>
           <p class="description">
-            Nous pouvons voir grâce à ce graphique que la majorité des usagers ayant répondu
-            à notre questionnaire on une consommation moyenne d'eau lors de leur douche (coupe
-            l'eau pendant le savonage).
+            Bien que la majorité des gens ont une consommation d'eau moyenne ou faible lorsqu'ils
+            prennent leur douche, on observe qu'il y a tout de même un nombre important de personne
+            qui ont une consommation forte dû au fait qu'ils ne coupent pas l'eau lors du savonnage.
+            Le fait de ne pas couper l'eau augmente leur consommation de plusieurs dizaines de litres
+            d'eau par douche. C'est un geste simple qu'il est nécessaire d'avoir.
           </p>
         </div>
         <div class="col-md-10 plot">
@@ -261,8 +263,12 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
             <h2>Bains</h2>
             <p class="description">
-              Ici, on voit que seulement 14% des usagers ayant répondu à notre questionnaire prennent
-              un bain.
+              Le bain consomme beaucoup plus d'eau qu'une douche et n'est pas du tout indispensable.
+              Ici on observe que plus de <?= round($pctBainOui) ?>% de la population sondé prend un
+              bain de manière régulière.
+              Bien que cela puisse être agréable, il faut que le bain reste quelque chose de plus
+              qu'occasionnel. Cela peut vous permettre de réduire facilement et efficacement votre
+              consommation d'eau.
             </p>
           </div>
           <div class="col-md-10 plot">
@@ -279,9 +285,13 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
           <h2 class="title">Vaisselle</h2>
           <p class="description">
-            On observe sur ce graphique quelque chose d'intéressant, car la différence entre
-            les usagers utilisant un lave-vaisselle et ceux qui font la vaiselle à la main n'est
-            pas très importante, même si il y a plus de personne qui font la vaiselle à la main.
+            Avoir un lave-vaisselle n'est pas toujours la manière de faire la vaisselle la plus
+            économique, surtout si on a peu de couvert à laver. Mais si vous faites la vaisselle à la
+            main, il est primordial de laver vos couverts dans une bassine ou dans votre évier fermé
+            et de ne pas laisser l'eau couler. On passe en moyenne de 10 litres d'eau pour un lavage
+            dans une bassine à 40 litres d'eau pour une vaisselle à la main en laissant couler l'eau.
+            Dans la population sondé, on voit que plus de <?= round($pctVOui) ?>% laisse couler l'eau, ce qui est élevé.
+            Il est nécessaire de prendre de bonnes habitudes lorsque vous faites la vaisselle à la main.
           </p>
         </div>
         <div class="col-md-10 plot">
@@ -298,9 +308,13 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
             <h2>Jardin</h2>
             <p class="description">
-              On remarque une presque équivalence ici sur le sujet de l'arrosage du jardin. En
-              effet, comme il est dit sur la page conseil, il est préférable d'utiliser l'eau
-              de pluie pour ce genre d'activité.
+              Si vous avez des plantes à arroser, la méthode la plus écologique et économique est
+              d'utiliser de l'eau de pluie. Pour ce faire, le plus simple est d'installer un récupérateur
+              d'eau de pluie. Pour les résultats, on observe une répartition quasi identique entre
+              l'utilisation d'eau de pluie et d'eau du robinet. On peut expliquer cela par le fait qu'il
+              est parfois compliqué d'installer un récupérateur d'eau de pluie, notamment lorsqu'on habite
+              en appartement. Ce conseil s'applique donc surtout aux personnes qui ont la possibilité
+              d'installer ce genre de systèmes.
             </p>
           </div>
           <div class="col-md-10 plot">
@@ -317,8 +331,13 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
           <h2 class="title">Lave-linge</h2>
           <p class="description">
-            On remarque qu'une grande partie des usagers ayant répondu à notre test font
-            0 à 10 machine par mois.
+            L'utilisation d'un lave-linge est presque obligatoire et demander aux gens de réduire
+            son utilisation est compliqué. Cependant il est primordial de faire attention aux
+            étiquettes énergétiques qui indiquent notamment la consommation d'eau par machine,
+            surtout si votre appareil est ancien. Si votre appareil a été acheté avant 2011, il y a
+            de grande chance qu'il consomme beaucoup plus qu'un appareil récent (il faut faire
+            attention si la note est inférieure a A), surtout que l'on voit que plus de
+            <?= round($pctMalAncien) ?>% de la population sondé a un appareil antérieur a 2011.
           </p>
         </div>
         <div class="col-md-10 plot">
@@ -335,7 +354,11 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
             <h2>Piscine</h2>
             <p class="description">
-              On remarque ici une majorité de personne n'ayant pas de piscine.
+              Avoir une piscine peut tout simplement doubler votre consommation d'eau annuelle.
+              On observe ici que parmi les gens qui ont une piscine, <?= round($pctPiOui) ?>% vide et
+              remplisse entièrement leur piscine annuellement, ce qui n'est pas nécessaire.
+              Pour limiter le gaspillage,il faut penser à bâcher sa piscine pour éviter l'évaporation
+              de l'eau et changer seulement un quart du volume de la piscine en eau.
             </p>
           </div>
           <div class="col-md-10 plot">
@@ -352,9 +375,9 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
           <h2 class="title">Étiquettes énergétiques</h2>
           <p class="description">
-            On remarque ici que les résultats n'ont pas énormément de différence, même si
-            la plupart des usagers ont tendances à ne pas faire attention aux étiquettes
-            énergétiques à l'achat d'un produit électroménager.
+            Plus de 50% de la population sondé ne fait pas attention aux étiquettes énergétiques,
+            qui sont pourtant primordial lors de l'achat d'un appareil. La consommation d'eau peut
+            aller du simple au double voir au triple en fonction des appareils.
           </p>
         </div>
         <div class="col-md-10 plot">
@@ -404,7 +427,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
       options: {
         title: {
           display: true,
-          text: "Débit de la pomme de douche"
+          text: "Consommation d'eau sous la douche"
         },
         legend: {
           display: false
@@ -434,7 +457,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
       options: {
         title: {
           display: true,
-          text: "Pourcentage de bains"
+          text: "Pourcentage de personnes qui prennent au moins un bain par semaine"
         },
         legend: {
             labels: {
@@ -459,7 +482,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
       options: {
         title: {
           display: true,
-          text: "nombre de perssone qui laissent couler l'eau durant une vaisselle"
+          text: "Nombre de personne laissant couler l'eau pendant une vaisselle à la main"
         },
         legend: {
           display: false
@@ -514,7 +537,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
       options: {
           title: {
             display: true,
-            text: "Nombre de machine lancé par mois"
+            text: "Répartition des machines à laver par rapport à 2011"
           },
         legend: {
           display: false
@@ -534,7 +557,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
     var poolChart = new Chart(poolCtx, {
       type: 'pie',
       data: {
-          labels: ["Non", "Oui"],
+          labels: ["Oui", "Non"],
           datasets: [{
               backgroundColor: ["orange", '#2288e4'],
               borderColor: ["orange", '#2288e4'],
@@ -544,7 +567,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
       options: {
         title: {
           display: true,
-          text: "Possession de piscine"
+          text: "Remplissage complet de l'eau de la piscine par an"
         },
         legend: {
             labels: {
@@ -569,7 +592,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
       options: {
         title: {
           display: true,
-          text: "Attention portée aux étiquettes énergies à l'achat d'un bien électroménager"
+          text: "Attention portée aux étiquettes énergétiques à l'achat d'un bien électroménager"
         },
         legend: {
           display: false
@@ -597,14 +620,14 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
           }]
       },
       options: {
-          title: {
-            display: true,
-            text: "Consommation de bouteille d'eau"
-          },
+        title: {
+          display: true,
+          text: "Consommation de bouteille d'eau"
+        },
         legend: {
-            labels: {
-                fontColor: "white",
-            }
+          labels: {
+              fontColor: "white",
+          }
         }
       }
     });
