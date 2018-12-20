@@ -45,6 +45,7 @@ $vNon = 0;
 $vHeight = 0;
 foreach ($res as $row) {
   if($row["choixVaisselle"] == "main"){
+    $vHeight ++;
     if($row["methVaisselle"] == "oui"){$vOui ++;}
     if($row["methVaisselle"] == "non"){$vNon ++;}
   }
@@ -55,20 +56,14 @@ $pctVNon = ($vNon / $vHeight) * 100;
 //echo "<!-- vaisselle pct :".$pctVMain." ".$pctVLave."-->";
 
 //machine a laver
-$MAL0_5 = 0;
-$MAL5_10 = 0;
-$MAL10_15 = 0;
-$MAL15_20 = 0;
-$MAL20_25 = 0;
-$MAL25_plus = 0;
+$MalRecent = 0;
+$MalAncien = 0;
 foreach ($res as $row) {
-  if($row["freqMal"] >= 0 && $row["freqMal"] < 5){$MAL0_5 ++;}
-  if($row["freqMal"] >= 5 && $row["freqMal"] < 10){$MAL5_10 ++;}
-  if($row["freqMal"] >= 10 && $row["freqMal"] < 15){$MAL10_15 ++;}
-  if($row["freqMal"] >= 15 && $row["freqMal"] < 20){$MAL15_20 ++;}
-  if($row["freqMal"] >= 20 && $row["freqMal"] < 25){$MAL20_25 ++;}
-  if($row["freqMal"] >= 25 ){$MAL25_plus ++;}
+    if($row["dateMal"] == "recent"){$MalRecent ++;}
+    if($row["dateMal"] == "ancien"){$MalAncien ++;}
 }
+$pctMalRecent = ($MalRecent / $vHeight) * 100;
+$pctMalAncien = ($MalAncien / $vHeight) * 100;
 //echo "<!-- MAL :".$MAL0_5." ".$MAL5_10." ".$MAL10_15." ".$MAL15_20." ".$MAL20_25." ".$MAL25_plus."-->";
 
 //plante
@@ -140,9 +135,9 @@ $bain = [$bainNon,$bainOui];
 $pctBain = [round($pctBainNon),round($pctBainOui)];
 
 $vaisselle = [$vOui,$vNon];
-$pctVaisselle = [round($pctVMain),round($pctVLave)];
+$pctVaisselle = [round($pctVOui),round($pctVNon)];
 
-$MAL = [$MAL0_5,$MAL5_10,$MAL10_15,$MAL15_20,$MAL20_25,$MAL25_plus];
+$MAL = [$MalRecent,$MalAncien];
 
 $plante = [$pRobinet,$pPluie];
 $pctPlante = [round($pctPRobinet),round($pctPPluie)];
@@ -504,7 +499,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
     var washingChart = new Chart(washingCtx, {
       type: 'bar',
       data: {
-          labels: ["0-5", "5-10", "10-15", "15-20", "20-25", "+25"],
+          labels: ["Recent", "Ancien"],
           datasets: [{
               backgroundColor: '#2288e4',
               borderColor: '#2288e4',
