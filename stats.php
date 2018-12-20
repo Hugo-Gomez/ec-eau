@@ -85,15 +85,20 @@ $pctPPluie = ($pPluie / $pHeight) * 100;
 //piscine
 $piOui = 0;
 $piNon = 0;
+$piHeight = 0; 
 foreach ($res as $row) {
   if($row["piscine"] == "oui"){
-    $piOui ++;
-  }else{
-    $piNon ++;
+    $piHeight ++;
+    if($row["freqPiscine"] == "oui"){
+      $piOui ++;
+    }
+    if($row["freqPiscine"] == "non"){
+      $piNon ++;
+    }
   }
 }
-$pctPiOui = ($piOui / $height) * 100;
-$pctPiNon = ($piNon / $height) * 100;
+$pctPiOui = ($piOui / $piHeight) * 100;
+$pctPiNon = ($piNon / $piHeight) * 100;
 //echo "<!-- Piscine :".$piOui." ".$piNon."-->";
 //echo "<!-- Piscine pct :".$pctPiOui." ".$pctPiNon."-->";
 
@@ -142,7 +147,7 @@ $MAL = [$MalRecent,$MalAncien];
 $plante = [$pRobinet,$pPluie];
 $pctPlante = [round($pctPRobinet),round($pctPPluie)];
 
-$piscine = [$piOui,$piNon];
+$piscine = [$piNon,$piOui];
 $pctPiscine = [round($pctPiOui),round($pctPiNon)];
 
 $etiquette = [$etOui,$etNon];
@@ -529,7 +534,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
     var poolChart = new Chart(poolCtx, {
       type: 'pie',
       data: {
-          labels: ["Oui", "Non"],
+          labels: ["Non", "Oui"],
           datasets: [{
               backgroundColor: ["orange", '#2288e4'],
               borderColor: ["orange", '#2288e4'],
