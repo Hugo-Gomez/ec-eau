@@ -828,25 +828,25 @@ $the_consoPiscineGenMean = round(array_sum($the_consoPiscineGen)/count($the_cons
 		            <div class="block-18 text-center"style="    padding: 10px;">
 		              <div class="text">
 		                <strong class="number total" data-number="<?=$conso?>"><?=$conso?></strong>
-		                <span>Consommations en euros </span>
+		                <span>Consommations (en litres) </span>
 		              </div>
 		            </div>
                 <div class="block-18 text-center"style="    padding: 10px;">
 		              <div class="text">
-		                <strong class="number" data-number="<?=$conso?>"><?=$conso?></strong>
-		                <span>Economies possible en litres</span>
-		              </div>
-		            </div>
-                <div class="block-18 text-center"style="    padding: 10px;">
-		              <div class="text">
-		                <strong class="number" data-number="<?=$eco?>"><?=$eco?></strong>
-		                <span>Economies possible en litres</span>
+		                <strong class="number" data-number="<?=$conso * 0.003?>"><?=$conso * 0.003?></strong>
+		                <span>Economies possible (en euros)</span>
 		              </div>
 		            </div>
                 <div class="block-18 text-center"style="    padding: 10px;">
 		              <div class="text">
 		                <strong class="number" data-number="<?=$eco?>"><?=$eco?></strong>
-		                <span>Economies possible en litres</span>
+		                <span>Economies possible (en litres)</span>
+		              </div>
+		            </div>
+                <div class="block-18 text-center"style="    padding: 10px;">
+		              <div class="text">
+		                <strong class="number" data-number="<?=$eco * 0.003?>"><?=$eco * 0.003?></strong>
+		                <span>Economies possible (en euros)</span>
 		              </div>
 		            </div>
 		          </div>
