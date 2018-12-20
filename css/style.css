@@ -75,6 +75,10 @@
   justify-content: center;
 }
 
+.navbar-brand{
+  width: 10%;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;

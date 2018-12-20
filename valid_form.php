@@ -1,7 +1,7 @@
 <?php
 require_once('functions/connection.php');
 session_start();
-$sql="SELECT 
+$sql="SELECT
     `id`,
     `mail`,
     `age`,
@@ -34,7 +34,7 @@ $sql="SELECT
     `volumePiscine`,
     `etiquette`,
     `bouteille`
-FROM 
+FROM
     `result`
 WHERE
     `mail` = :mail
@@ -135,7 +135,7 @@ if($tmp["voiture"] == "oui"){
 //piscine
 if($tmp["piscine"] == "oui"){
   if($tmp["freqPiscine"] == "oui"){
-    $csPiscine1 = 1;    
+    $csPiscine1 = 1;
   }
 }
 //etiquette
@@ -150,18 +150,18 @@ if($tmp["bouteille"] == "bouteille"){
 //douche
 $debitDouche = 0;
 if($tmp["debitDouche"] == "faible"){$debitDouche = 12 ;}
-elseif($tmp["debitDouche"] == "moyen"){$debitDouche = 15 ;}  
+elseif($tmp["debitDouche"] == "moyen"){$debitDouche = 15 ;}
 elseif($tmp["debitDouche"] == "fort"){$debitDouche = 20 ;}
 $consoDouche = $tmp["tempsDouche"] * $debitDouche * $tmp["freqDouche"];//par semaine
 //bain
 $rempBain = 0;
 if($tmp["rempBain"] == "oui"){$rempBain = 200 ;}
-elseif($tmp["rempBain"] == "non"){$rempBain = 120 ;}  
+elseif($tmp["rempBain"] == "non"){$rempBain = 120 ;}
 $consoBain = $tmp["freqBain"] * $rempBain; //par semaine
 //dents
 $eauDents = 0;
 if($tmp["eauDents"] == "oui"){$eauDents = 2 ;}
-elseif($tmp["eauDents"] == "parfois"){$eauDents = 19 ;}  
+elseif($tmp["eauDents"] == "parfois"){$eauDents = 19 ;}
 elseif($tmp["eauDents"] == "non"){$eauDents = 36 ;}
 $consoDents = $tmp["freqDents"] * $eauDents;//par jour
 //vaisselle
@@ -244,7 +244,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
         <div class="row no-gutters">
           <div class="col-md-4 ftco-animate py-5 nav-link-wrap">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            
+
             <?php
               //$csDouche1 = 0;$csDouche2 = 0;$csDouche3 = 0;
               if ($csDouche1 == 1 || $csDouche2 == 1 || $csDouche3 == 1){
@@ -445,7 +445,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                 ?>
                 </div>
 
-                
+
                 <div class="tab-pane fade py-5" id="v-pills-swimmer" role="tabpanel" aria-labelledby="v-pills-drink-tab">
                 <i class="icon mb-3 d-block fas fa-swimmer"></i>
                 <h2 class="mb-4">Piscine</h2>
@@ -493,13 +493,13 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                     consommation (en L/an)
                   </th>
                   <th>
-                    consommation (en €/an)                  
+                    consommation (en €/an)
                   </th>
                   <th>
                     économie possible (en L/an)
                   </th>
                   <th>
-                    économie possible (en €/an)   
+                    économie possible (en €/an)
                   </th>
                   <tr>
                     <td>
@@ -648,7 +648,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                 </table>
                 </p>
                 </div>
-               
+
             </div>
           </div>
         </div>
@@ -660,7 +660,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-            <h2 class="mb-4">Votre consommation d'eau par ans</h2>
+            <h2 class="mb-4">Votre consommation d'eau par an</h2>
             <span class="subheading"></span>
           </div>
         </div>
@@ -686,7 +686,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
 		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="<?=$eco?>"><?=$eco?></strong> 
+		                <strong class="number" data-number="<?=$eco?>"><?=$eco?></strong>
 		                <span>Economies possible en litres</span>
 		              </div>
 		            </div>
