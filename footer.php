@@ -28,11 +28,11 @@
       <div class="col-md">
          <div class="ftco-footer-widget mb-4">
           <ul class="list-unstyled">
-            <li><a href="#" class="py-2 d-block">Accueil</a></li>
-            <li><a href="#" class="py-2 d-block">Conseils</a></li>
-            <li><a href="#" class="py-2 d-block">Statistiques</a></li>
-            <li><a href="#" class="py-2 d-block">Contact</a></li>
-            <li><a href="#" class="py-2 d-block">Faire le Test</a></li>
+            <li><a href="index.php" class="py-2 d-block">Accueil</a></li>
+            <li><a href="advice.php" class="py-2 d-block">Conseils</a></li>
+            <li><a href="stats.php" class="py-2 d-block">Statistiques</a></li>
+            <li><a href="contact.php" class="py-2 d-block">Contact</a></li>
+            <li><a href="test.php" class="py-2 d-block">Faire le Test</a></li>
           </ul>
         </div>
       </div>
