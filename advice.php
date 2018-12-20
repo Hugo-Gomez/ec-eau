@@ -12,7 +12,7 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center">
-            <h1 class="mb-3 bread">Améliorer sa consommation d'eau</h1>
+            <h1 class="mb-3 bread">Réduire sa consommation d'eau</h1>
           </div>
         </div>
       </div>
