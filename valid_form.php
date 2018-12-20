@@ -880,9 +880,9 @@ $the_consoPiscineGenMean = round(array_sum($the_consoPiscineGen)/count($the_cons
     var meanChart = new Chart(meanCtx, {
       type: 'bar',
       data: {
-          labels: ["Total","Douche","Bain","Dents","Vaisselle","Machine a laver","Voiture","Piscine"],
+          labels: ["Total","Douche","Bain","Dents","Vaisselle","Machine à laver","Voiture","Piscine"],
           datasets: [{
-              label : "Moyenne des utilisateur",
+              label : "Moyenne des utilisateurs",
               backgroundColor: 'orange',
               borderColor: 'orange',
               data: <?php echo json_encode([$the_consoGenMean,$the_consoDoucheGenMean,$the_consoBainGenMean,$the_consoDentsGenMean,$the_consoVaisselleGenMean,$the_consoMalGenMean,$the_consoVoitureGenMean,$the_consoPiscineGenMean] ) ?>,
