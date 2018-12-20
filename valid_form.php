@@ -241,6 +241,7 @@ $ecoBain = $consoBain;
 $ecoDents = $consoDents - 4*365;
 $ecoVaisselle = 0;
 if($tmp["choixVaisselle"] == "main"){$ecoVaisselle = $consoVaisselle - 3650;}
+if($ecoVaisselle<0){$ecoVaisselle = 0;}
 $ecoMal = $consoMal - ($tmp["freqMal"] * 50)*12;
 $ecoVoiture = 0;
 if($tmp["voiture"] == "oui"){$ecoVoiture = $consoVoiture - (60 * 12);}
@@ -520,7 +521,168 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                 <div class="tab-pane fade py-5" id="v-pills-file-alt" role="tabpanel" aria-labelledby="v-pills-file-alt-tab">
                 <i class="icon mb-3 d-block fas fa-file-alt"></i>
                 <h2 class="mb-4">Récap</h2>
-                <p>- Boire de l’eau en bouteille est économiquement plus cher que boire de l’eau du robinet. L’eau en bouteille a aussi un impact écologique plus fort à cause de l’embouteillage plastique et de la logistique. Il existe en plus des solutions abordables pour filtrer l’eau du robinet afin de supprimer certaines particules comme le calcaire ou le plomb</p>
+                <p>
+                <table>
+                  <th>
+                  </th>
+                  <th>
+                    consomation (en L/an)
+                  </th>
+                  <th>
+                    consomation (en €/an)                  
+                  </th>
+                  <th>
+                    économie possible (en L/an)
+                  </th>
+                  <th>
+                    économie possible (en €/an)   
+                  </th>
+                  <tr>
+                    <td>
+                    <!--consoDouche , consoBain , consoDents , consoVaisselle , consoMal , consoVoiture , consoPiscine-->
+                    <b>Douche</b>
+                    </td>
+                    <td>
+                    <?=$consoDouche?>
+                    </td>
+                    <td>
+                    <?=$consoDouche * 0.003?>
+                    </td>
+                    <td>
+                    <?=$ecoDouche?>
+                    </td>
+                    <td>
+                    <?=$ecoDouche * 0.003?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <!--consoDouche , consoBain , consoDents , consoVaisselle , consoMal , consoVoiture , consoPiscine-->
+                    <b>Bain</b>
+                    </td>
+                    <td>
+                    <?=$consoBain?>
+                    </td>
+                    <td>
+                    <?=$consoBain * 0.003?>
+                    </td>
+                    <td>
+                    <?=$ecoBain?>
+                    </td>
+                    <td>
+                    <?=$ecoBain * 0.003?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <!--consoDouche , consoBain , consoDents , consoVaisselle , consoMal , consoVoiture , consoPiscine-->
+                    <b>Dents</b>
+                    </td>
+                    <td>
+                    <?=$consoDents?>
+                    </td>
+                    <td>
+                    <?=$consoDents * 0.003?>
+                    </td>
+                    <td>
+                    <?=$ecoDents?>
+                    </td>
+                    <td>
+                    <?=$ecoDents * 0.003?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <!--consoDouche , consoBain , consoDents , consoVaisselle , consoMal , consoVoiture , consoPiscine-->
+                    <b>Vaisselle</b>
+                    </td>
+                    <td>
+                    <?=$consoVaisselle?>
+                    </td>
+                    <td>
+                    <?=$consoVaisselle * 0.003?>
+                    </td>
+                    <td>
+                    <?=$ecoVaisselle?>
+                    </td>
+                    <td>
+                    <?=$ecoVaisselle * 0.003?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <!--consoDouche , consoBain , consoDents , consoVaisselle , consoMal , consoVoiture , consoPiscine-->
+                    <b>Machine a lavé</b>
+                    </td>
+                    <td>
+                    <?=$consoMal?>
+                    </td>
+                    <td>
+                    <?=$consoMal * 0.003?>
+                    </td>
+                    <td>
+                    <?=$ecoMal?>
+                    </td>
+                    <td>
+                    <?=$ecoMal * 0.003?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <!--consoDouche , consoBain , consoDents , consoVaisselle , consoMal , consoVoiture , consoPiscine-->
+                    <b>Voiture</b>
+                    </td>
+                    <td>
+                    <?=$consoVoiture?>
+                    </td>
+                    <td>
+                    <?=$consoVoiture * 0.003?>
+                    </td>
+                    <td>
+                    <?=$ecoVoiture?>
+                    </td>
+                    <td>
+                    <?=$ecoVoiture * 0.003?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <!--consoDouche , consoBain , consoDents , consoVaisselle , consoMal , consoVoiture , consoPiscine-->
+                    <b>Piscine</b>
+                    </td>
+                    <td>
+                    <?=$consoPiscine?>
+                    </td>
+                    <td>
+                    <?=$consoPiscine * 0.003?>
+                    </td>
+                    <td>
+                    <?=$ecoPiscine?>
+                    </td>
+                    <td>
+                    <?=$ecoPiscine * 0.003?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <!--consoDouche , consoBain , consoDents , consoVaisselle , consoMal , consoVoiture , consoPiscine-->
+                    <b>Total</b>
+                    </td>
+                    <td>
+                    <?=$conso?>
+                    </td>
+                    <td>
+                    <?=$conso * 0.003?>
+                    </td>
+                    <td>
+                    <?=$eco?>
+                    </td>
+                    <td>
+                    <?=$eco * 0.003?>
+                    </td>
+                  </tr>
+                </table>
+                </p>
                 </div>
                
             </div>
@@ -560,7 +722,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
 		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
 		            <div class="block-18 text-center">
 		              <div class="text">
-		                <strong class="number" data-number="<?=$eco?>"><?=$eco?></strong>
+		                <strong class="number" data-number="<?=$eco?>"><?=$eco?></strong> 
 		                <span>Economies possible en litres</span>
 		              </div>
 		            </div>
