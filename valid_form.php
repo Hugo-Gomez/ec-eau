@@ -355,23 +355,23 @@ foreach($the_res as $the_tmp){
     $the_consoVoiture = ($the_consoVoiture * 12) ;
     $the_conso = $the_consoDouche + $the_consoBain + $the_consoDents + $the_consoVaisselle + $the_consoMal + $the_consoVoiture + $the_consoPiscine;
 
-    $the_consoGen[] = $the_conso;
-    $the_consoDoucheGen[] = $the_consoDouche;
-    $the_consoBainGen[] = $the_consoBain;
-    $the_consoDentsGen[] = $the_consoDents;
-    $the_consoVaisselleGen[] = $the_consoVaisselle;
-    $the_consoMalGen[] = $the_consoMal;
-    $the_consoVoitureGen[] = $the_consoVoiture;
-    $the_consoPiscineGen[] = $the_consoPiscine;
+    $the_consoGen[] = round($the_conso,2);
+    $the_consoDoucheGen[] = round($the_consoDouche,2);
+    $the_consoBainGen[] = round($the_consoBain,2);
+    $the_consoDentsGen[] = round($the_consoDents,2);
+    $the_consoVaisselleGen[] = round($the_consoVaisselle,2);
+    $the_consoMalGen[] = round($the_consoMal,2);
+    $the_consoVoitureGen[] = round($the_consoVoiture,2);
+    $the_consoPiscineGen[] = round($the_consoPiscine,2);
 }
-$the_consoGenMean = array_sum($the_consoGen)/count($the_consoGen);
-$the_consoDoucheGenMean = array_sum($the_consoDoucheGen)/count($the_consoDoucheGen);
-$the_consoBainGenMean = array_sum($the_consoBainGen)/count($the_consoBainGen);
-$the_consoDentsGenMean = array_sum($the_consoDentsGen)/count($the_consoDentsGen);
-$the_consoVaisselleGenMean = array_sum($the_consoVaisselleGen)/count($the_consoVaisselleGen);
-$the_consoMalGenMean = array_sum($the_consoMalGen)/count($the_consoMalGen);
-$the_consoVoitureGenMean = array_sum($the_consoVoitureGen)/count($the_consoVoitureGen);
-$the_consoPiscineGenMean = array_sum($the_consoPiscineGen)/count($the_consoPiscineGen);
+$the_consoGenMean = round(array_sum($the_consoGen)/count($the_consoGen),2);
+$the_consoDoucheGenMean = round(array_sum($the_consoDoucheGen)/count($the_consoDoucheGen),2);
+$the_consoBainGenMean = round(array_sum($the_consoBainGen)/count($the_consoBainGen),2);
+$the_consoDentsGenMean = round(array_sum($the_consoDentsGen)/count($the_consoDentsGen),2);
+$the_consoVaisselleGenMean = round(array_sum($the_consoVaisselleGen)/count($the_consoVaisselleGen),2);
+$the_consoMalGenMean = round(array_sum($the_consoMalGen)/count($the_consoMalGen),2);
+$the_consoVoitureGenMean = round(array_sum($the_consoVoitureGen)/count($the_consoVoitureGen),2);
+$the_consoPiscineGenMean = round(array_sum($the_consoPiscineGen)/count($the_consoPiscineGen),2);
 
 
 
