@@ -10,7 +10,7 @@
        <div class="container">
          <div class="row test-row">
            <div class="col-md-8 pr-md-8 test-form">
-             <form action="functions/addResult.php" method="post" class="form-group">
+             <form action="functions/getMyResult.php" method="post" class="form-group">
              <!-- Récupérer mes résultats -->
                <h2 class="section-title">Si vous avez déjà effectué le test, entrez votre adresse email pour récupérer vos résultats</h2>
                <input placeholder="Exemple : exemple@mail.com" class="form-control" type="email" required name="email" id="email"><br>
