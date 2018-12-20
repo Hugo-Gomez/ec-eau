@@ -49,9 +49,7 @@ while(false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)){
 $res[]=$row;
 }
 $tmp = $res[0];
-
 // -----conseils-----
-
 //bool
 $csDouche1 = 0;// label energie
 $csDouche2 = 0;//coupez l'eau
@@ -72,7 +70,6 @@ $csVoiture1 = 0;//lavage auto
 $csPiscine1 = 0;// 1/4 remplissage /an
 $csEtiquette1 = 0;//check ettiquette
 $csBouteille1 = 0;// eau du robinet
-
 //douche
 if($tmp["debitDouche"] == "fort"){
   $csDouche1 = 1;
@@ -84,7 +81,6 @@ if($tmp["tempsDouche"] > 15){
   $csDouche3 = 1;
 }
 //echo "<!--".$csDouche1." ".$csDouche2."-->";
-
 //bain
 if($tmp["freqBain"] > 0){
   $csBain1 = 1;
@@ -92,12 +88,10 @@ if($tmp["freqBain"] > 0){
     $csBain2 = 1;
   }
 }
-
 //dents
 if($tmp["eauDents"] != "oui"){
   $csDent1 = 1;
 }
-
 //vaisselle
 if($tmp["choixVaisselle"] == "main"){
   if($tmp["methVaisselle"] == "oui"){
@@ -109,12 +103,10 @@ if($tmp["choixVaisselle"] == "main"){
 }else{
   $csVaisselle3 = 1;
 }
-
 //MAL
 if($tmp["dateMal"] == "ancien"){
   $csMAL1 = 1;
 }
-
 //ecoeau
 $ecoEau = $tmp["ecoEau"];
 if($ecoEau < 100){
@@ -126,8 +118,6 @@ if($ecoEau % 100 < 10){
 if($ecoEau % 10 < 1){
   $csEco3 = 1;
 }
-
-
 //plante
 if($tmp["plante"] == "oui"){
   if($tmp["momentPlante"] != "soir"){
@@ -137,57 +127,44 @@ if($tmp["plante"] == "oui"){
     $csPlante2 = 1;
   }
 }
-
 //voiture
 if($tmp["voiture"] == "oui"){
   if($tmp["methVoiture"] == "manuel"){
     $csVoiture1 = 1;
   }
 }
-
 //piscine
 if($tmp["piscine"] == "oui"){
   if($tmp["freqPiscine"] == "oui"){
     $csPiscine1 = 1;    
   }
 }
-
 //etiquette
 if($tmp["etiquette"] == "non"){
   $csEtiquette1 = 1;
 }
-
 //bouteille
 if($tmp["bouteille"] == "bouteille"){
   $csBouteille1 = 1;
 }
-
-
-
-
 // -----conso-----
-
 //douche
 $debitDouche = 0;
 if($tmp["debitDouche"] == "faible"){$debitDouche = 12 ;}
 elseif($tmp["debitDouche"] == "moyen"){$debitDouche = 15 ;}  
 elseif($tmp["debitDouche"] == "fort"){$debitDouche = 20 ;}
 $consoDouche = $tmp["tempsDouche"] * $debitDouche * $tmp["freqDouche"];//par semaine
-
-
 //bain
 $rempBain = 0;
 if($tmp["rempBain"] == "oui"){$rempBain = 200 ;}
 elseif($tmp["rempBain"] == "non"){$rempBain = 120 ;}  
 $consoBain = $tmp["freqBain"] * $rempBain; //par semaine
-
 //dents
 $eauDents = 0;
 if($tmp["eauDents"] == "oui"){$eauDents = 2 ;}
 elseif($tmp["eauDents"] == "parfois"){$eauDents = 19 ;}  
 elseif($tmp["eauDents"] == "non"){$eauDents = 36 ;}
 $consoDents = $tmp["freqDents"] * $eauDents;//par jour
-
 //vaisselle
 $consoVaisselle = 0;
 if($tmp["choixVaisselle"] == "main"){
@@ -199,7 +176,6 @@ if($tmp["choixVaisselle"] == "main"){
 }else{
   $consoVaisselle = $tmp["freqVaisselle"] * 12;//par semaines
 }
-
 //MAL
 $consoMal = 0;
 if($tmp["dateMal"] == "ancien"){
@@ -207,7 +183,6 @@ if($tmp["dateMal"] == "ancien"){
 }else{
   $consoMal = $tmp["freqMal"] * 50;//par mois
 }
-
 //voiture
 $consoVoiture = 0;
 if($tmp["methVoiture"] == "manuel"){
@@ -215,7 +190,6 @@ if($tmp["methVoiture"] == "manuel"){
 }else{
   $consoVoiture = $tmp["freqVoiture"] * 60;//par mois
 }
-
 //piscine
 $consoPiscine = 0;
 if($tmp["piscine"] = "oui"){
@@ -225,7 +199,6 @@ if($tmp["piscine"] = "oui"){
     $consoPiscine = $tmp["volumePiscine"] * 250;//par an
   }
 }
-
 //conso
 $consoDouche = ($consoDouche * 52) ;
 $consoBain = ($consoBain * 52) ;
@@ -234,7 +207,6 @@ $consoVaisselle = ($consoVaisselle * 52) ;
 $consoMal = ($consoMal * 12) ;
 $consoVoiture = ($consoVoiture * 12) ;
 $conso = $consoDouche + $consoBain + $consoDents + $consoVaisselle + $consoMal + $consoVoiture + $consoPiscine;
-
 //eco
 $ecoDouche = $consoDouche - (5*12*$tmp["freqDouche"]*52);
 $ecoBain = $consoBain;
@@ -247,14 +219,7 @@ $ecoVoiture = 0;
 if($tmp["voiture"] == "oui"){$ecoVoiture = $consoVoiture - (60 * 12);}
 $ecoPiscine = 0;
 if($tmp["piscine"] == "oui"){$ecoPiscine = $consoPiscine - $tmp["volumePiscine"] * 250;}
-
 $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture + $ecoPiscine;
-
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -269,7 +234,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center">
-            <h1 class="mb-3 bread">Les conseils personnel</h1>
+            <h1 class="mb-3 bread">Les conseils personnels</h1>
           </div>
         </div>
       </div>
@@ -351,7 +316,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                 <?php
                 if ($csDouche1 == 1){
                 ?>
-                <p>- Pensez à installer des pommeaux de douche munis du label ‘energy’, des réducteurs de débits et des stop-douche.</p>
+                <p>- Pensez à installer des pommeaux de douche munis du label ‘energy’, des réducteurs de débits et des stops-douches.</p>
                 <?php
                 }
                 if ($csDouche2 == 1){
@@ -446,7 +411,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                 }
                 if ($csEco3 == 1){
                 ?>
-                <p>- Les toilettes sont une des plus grandes sources de consommation d’eau au quotidien. Il est difficile de diminuer son utilisation, cependant les chasses d’eau économes sont un moyen efficace de diminuer cette consommation. (La consommation d’eau peut être divisé par 2 voir 3).</p>
+                <p>- Les toilettes sont une des plus grandes sources de consommation d’eau au quotidien. Il est difficile de diminuer son utilisation, cependant les chasses d’eau économes sont un moyen efficace de diminuer cette consommation. La consommation d’eau peut être divisée par 2 voir 3.</p>
                 <?php
                 }
                 ?>
