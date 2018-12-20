@@ -419,7 +419,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
         <p class="description">
         Si vous souhaitez travailler avec les données récoltés, nous vous les proposons au format CSV. Cependant veuillez noter que les données sont anonymes pour des raisons de confidentialité.
         </p>
-        <a class="test-link btn btn-primary" href="/functions/download.php"><span>Telecharger au format CSV</span></a>
+        <a class="test-link btn btn-primary" href="/functions/download.php"><span>Télécharger au format CSV</span></a>
     </div>
   </div>
 </section>
