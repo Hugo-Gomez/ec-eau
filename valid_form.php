@@ -76,7 +76,7 @@ if($tmp["debitDouche"] == "fort"){
 }elseif($tmp["debitDouche"] == "moyen"){
   $csDouche1 = 1;
 }
-if($tmp["tempsDouche"] > 15){
+if($tmp["tempsDouche"] > 10){
   $csDouche3 = 1;
 }
 //echo "<!--".$csDouche1." ".$csDouche2."-->";
@@ -219,6 +219,163 @@ if($tmp["voiture"] == "oui"){$ecoVoiture = $consoVoiture - (60 * 12);}
 $ecoPiscine = 0;
 if($tmp["piscine"] == "oui"){$ecoPiscine = $consoPiscine - $tmp["volumePiscine"] * 250;}
 $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture + $ecoPiscine;
+
+
+
+
+
+
+
+
+
+$the_sql="SELECT
+    `id`,
+    `mail`,
+    `age`,
+    `sexe`,
+    `ville`,
+    `cp`,
+    `freqDouche`,
+    `tempsDouche`,
+    `debitDouche`,
+    `freqBain`,
+    `rempBain`,
+    `freqDents`,
+    `eauDents`,
+    `freqVaisselle`,
+    `choixVaisselle`,
+    `methVaisselle`,
+    `couvVaisselle`,
+    `freqMal`,
+    `dateMal`,
+    `ecoEau`,
+    `plante`,
+    `momentPlante`,
+    `eauPlante`,
+    `freqPlante`,
+    `voiture`,
+    `methVoiture`,
+    `freqVoiture`,
+    `piscine`,
+    `freqPiscine`,
+    `volumePiscine`,
+    `etiquette`,
+    `bouteille`
+FROM
+    `result`
+;";
+$the_stmt = $conn->prepare($the_sql);
+$the_stmt->execute();
+errorHandler($the_stmt);
+$the_res=null;
+while(false !== $the_row = $the_stmt->fetch(PDO::FETCH_ASSOC)){
+$the_res[]=$the_row;
+}
+
+
+$the_conso = [];
+$the_consoDouche = [];
+$the_consoBain = [];
+$the_consoDents = [];
+$the_consoVaisselle = [];
+$the_consoMal = [];
+$the_consoVoiture = [];
+$the_consoPiscine = [];
+
+$the_eco = [];
+$the_ecoDouche = [];
+$the_ecoBain = [];
+$the_ecoDents = [];
+$the_ecoVaisselle = [];
+$the_ecoMal = [];
+$the_ecoVoiture = [];
+$the_ecoPiscine = [];
+
+
+foreach($the_res as $the_tmp){
+
+    // -----conso-----
+    //douche
+    $the_debitDouche = 0;
+    if($the_tmp["debitDouche"] == "faible"){$the_debitDouche = 12 ;}
+    elseif($the_tmp["debitDouche"] == "moyen"){$the_debitDouche = 15 ;}
+    elseif($the_tmp["debitDouche"] == "fort"){$the_debitDouche = 20 ;}
+    $the_consoDouche = $the_tmp["tempsDouche"] * $the_debitDouche * $the_tmp["freqDouche"];//par semaine
+    //bain
+    $the_rempBain = 0;
+    if($the_tmp["rempBain"] == "oui"){$the_rempBain = 200 ;}
+    elseif($the_tmp["rempBain"] == "non"){$the_rempBain = 120 ;}
+    $the_consoBain = $the_tmp["freqBain"] * $the_rempBain; //par semaine
+    //dents
+    $the_eauDents = 0;
+    if($the_tmp["eauDents"] == "oui"){$the_eauDents = 2 ;}
+    elseif($the_tmp["eauDents"] == "parfois"){$the_eauDents = 19 ;}
+    elseif($the_tmp["eauDents"] == "non"){$the_eauDents = 36 ;}
+    $the_consoDents = $the_tmp["freqDents"] * $the_eauDents;//par jour
+    //vaisselle
+    $the_consoVaisselle = 0;
+    if($the_tmp["choixVaisselle"] == "main"){
+    if($the_tmp["methVaisselle"] == "non"){
+        $the_consoVaisselle = $the_tmp["freqVaisselle"] * 10;//par semaines
+    }else{
+        $the_consoVaisselle = $the_tmp["freqVaisselle"] * $the_tmp["couvVaisselle"] * 0.5;//par semaines
+    }
+    }else{
+    $the_consoVaisselle = $the_tmp["freqVaisselle"] * 12;//par semaines
+    }
+    //MAL
+    $the_consoMal = 0;
+    if($the_tmp["dateMal"] == "ancien"){
+    $the_consoMal = $the_tmp["freqMal"] * 100;//par mois
+    }else{
+    $the_consoMal = $the_tmp["freqMal"] * 50;//par mois
+    }
+    //voiture
+    $the_consoVoiture = 0;
+    if($the_tmp["methVoiture"] == "manuel"){
+    $the_consoVoiture = $the_tmp["freqVoiture"] * 200;//par mois
+    }else{
+    $the_consoVoiture = $the_tmp["freqVoiture"] * 60;//par mois
+    }
+    //piscine
+    $the_consoPiscine = 0;
+    if($the_tmp["piscine"] = "oui"){
+    if($the_tmp["freqPiscine"] = "oui"){
+        $the_consoPiscine = $the_tmp["volumePiscine"] * 1000;//par an
+    }else{
+        $the_consoPiscine = $the_tmp["volumePiscine"] * 250;//par an
+    }
+    }
+    //conso
+    $the_consoDouche = ($the_consoDouche * 52) ;
+    $the_consoBain = ($the_consoBain * 52) ;
+    $the_consoDents = ($the_consoDents * 365) ;
+    $the_consoVaisselle = ($the_consoVaisselle * 52) ;
+    $the_consoMal = ($the_consoMal * 12) ;
+    $the_consoVoiture = ($the_consoVoiture * 12) ;
+    $the_conso = $the_consoDouche + $the_consoBain + $the_consoDents + $the_consoVaisselle + $the_consoMal + $the_consoVoiture + $the_consoPiscine;
+
+    $the_consoGen[] = round($the_conso,2);
+    $the_consoDoucheGen[] = round($the_consoDouche,2);
+    $the_consoBainGen[] = round($the_consoBain,2);
+    $the_consoDentsGen[] = round($the_consoDents,2);
+    $the_consoVaisselleGen[] = round($the_consoVaisselle,2);
+    $the_consoMalGen[] = round($the_consoMal,2);
+    $the_consoVoitureGen[] = round($the_consoVoiture,2);
+    $the_consoPiscineGen[] = round($the_consoPiscine,2);
+}
+$the_consoGenMean = round(array_sum($the_consoGen)/count($the_consoGen),2);
+$the_consoDoucheGenMean = round(array_sum($the_consoDoucheGen)/count($the_consoDoucheGen),2);
+$the_consoBainGenMean = round(array_sum($the_consoBainGen)/count($the_consoBainGen),2);
+$the_consoDentsGenMean = round(array_sum($the_consoDentsGen)/count($the_consoDentsGen),2);
+$the_consoVaisselleGenMean = round(array_sum($the_consoVaisselleGen)/count($the_consoVaisselleGen),2);
+$the_consoMalGenMean = round(array_sum($the_consoMalGen)/count($the_consoMalGen),2);
+$the_consoVoitureGenMean = round(array_sum($the_consoVoitureGen)/count($the_consoVoitureGen),2);
+$the_consoPiscineGenMean = round(array_sum($the_consoPiscineGen)/count($the_consoPiscineGen),2);
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -665,41 +822,39 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
           </div>
         </div>
     		<div class="row justify-content-center">
-    			<div class="col-md-10">
+    			<div class="col-md-12">
 		    		<div class="row">
 		          <div class="col-md-12 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
+		            <div class="block-18 text-center"style="    padding: 10px;">
 		              <div class="text">
-		                <strong class="number total" data-number="<?=$conso*0.003?>"><?=$conso*0.003?></strong>
-		                <span>Consommation en euros </span>
+		                <strong class="number total" data-number="<?=$conso?>"><?=$conso?></strong>
+		                <span>Consommation (en litres) </span>
 		              </div>
 		            </div>
-		          </div>
-		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
+                <div class="block-18 text-center"style="    padding: 10px;">
 		              <div class="text">
-		                <strong class="number" data-number="<?=$conso;?>"><?=$conso;?></strong>
-		                <span>Consommation en litres</span>
+		                <strong class="number" data-number="<?=$conso * 0.003?>"><?=$conso * 0.003?></strong>
+		                <span>Consommation (en euros)</span>
 		              </div>
 		            </div>
-		          </div>
-		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
+                <div class="block-18 text-center"style="    padding: 10px;">
 		              <div class="text">
 		                <strong class="number" data-number="<?=$eco?>"><?=$eco?></strong>
-		                <span>Économie possible en litres</span>
+		                <span>Économie possible (en litres)</span>
 		              </div>
 		            </div>
-		          </div>
-		          <div class="col-md-12 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center">
+                <div class="block-18 text-center"style="    padding: 10px;">
 		              <div class="text">
-		                <strong class="number total" data-number="<?=$eco*0.003?>"><?=$eco*0.003?></strong>
-		                <span>Économie possible en euros </span>
+		                <strong class="number" data-number="<?=$eco * 0.003?>"><?=$eco * 0.003?></strong>
+		                <span>Économie possible (en euros)</span>
 		              </div>
 		            </div>
 		          </div>
+		          <div class="col-md-12 d-flex justify-content-center counter-wrap">
+                <canvas id="meanChart" width="800" height="350"></canvas>
+              </div>
 		        </div>
+	        </div>
 	        </div>
         </div>
     	</div>
@@ -709,6 +864,54 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
 
 
   <?php include "js-import.php" ?>
+  <script type="text/javascript">
+
+    // Mean
+
+//$the_consoGenMean = array_sum($the_consoGen)/count($the_consoGen);
+//$the_consoDoucheGenMean = array_sum($the_consoDoucheGen)/count($the_consoDoucheGen);
+//$the_consoBainGenMean = array_sum($the_consoBainGen)/count($the_consoBainGen);
+//$the_consoDentsGenMean = array_sum($the_consoDentsGen)/count($the_consoDentsGen);
+//$the_consoVaisselleGenMean = array_sum($the_consoVaisselleGen)/count($the_consoVaisselleGen);
+//$the_consoMalGenMean = array_sum($the_consoMalGen)/count($the_consoMalGen);
+//$the_consoVoitureGenMean = array_sum($the_consoVoitureGen)/count($the_consoVoitureGen);
+//$the_consoPiscineGenMean = array_sum($the_consoPiscineGen)/count($the_consoPiscineGen);
+    var meanCtx = document.getElementById('meanChart').getContext('2d');
+    var meanChart = new Chart(meanCtx, {
+      type: 'bar',
+      data: {
+          labels: ["Total","Douche","Bain","Dents","Vaisselle","Machine à laver","Voiture","Piscine"],
+          datasets: [{
+              label : "Moyenne des utilisateurs",
+              backgroundColor: 'orange',
+              borderColor: 'orange',
+              data: <?php echo json_encode([$the_consoGenMean,$the_consoDoucheGenMean,$the_consoBainGenMean,$the_consoDentsGenMean,$the_consoVaisselleGenMean,$the_consoMalGenMean,$the_consoVoitureGenMean,$the_consoPiscineGenMean] ) ?>,
+          },{
+              label : "Moi",
+            backgroundColor: '#2288e4',
+              borderColor: '#2288e4',
+              data: <?php echo json_encode([$conso,$consoDouche,$consoBain,$consoDents,$consoVaisselle,$consoMal,$consoVoiture] ) ?>,
+
+          }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Votre consommation"
+        },
+        legend: {
+          display: true
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+    </script>
 
   </body>
 </html>

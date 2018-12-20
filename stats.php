@@ -156,6 +156,10 @@ $pctEtiquette = [round($pctEtOui),round($pctEtNon)];
 $bouteille = [$boOui,$boNon];
 $pctBouteille = [round($pctBoOui),round($pctBoNon)];
 
+
+
+
+
 ?>
   <?php include "topbar.php" ?>
 
@@ -406,6 +410,19 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
       </div>
     </div>
   </section>
+
+<section class="presentation-section">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+        <h2 class="title">Téléchargement de notre base de données en CSV</h2>
+        <p class="description">
+        Si vous souhaitez travailler avec les données récoltés, nous vous les proposons au format CSV. Cependant veuillez noter que les données sont anonymes pour des raisons de confidentialité.
+        </p>
+        <a class="test-link btn btn-primary" href="/functions/download.php"><span>Telecharger au format CSV</span></a>
+    </div>
+  </div>
+</section>
 
   <?php include "footer.php" ?>
 
