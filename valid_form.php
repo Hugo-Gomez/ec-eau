@@ -1,7 +1,6 @@
 <?php
 require_once('functions/connection.php');
 session_start();
-$_SESSION['mail']="bocquillon.pierre@orange.fr";
 $sql="SELECT 
     `id`,
     `mail`,
