@@ -156,6 +156,10 @@ $pctEtiquette = [round($pctEtOui),round($pctEtNon)];
 $bouteille = [$boOui,$boNon];
 $pctBouteille = [round($pctBoOui),round($pctBoNon)];
 
+
+
+
+
 ?>
   <?php include "topbar.php" ?>
 
