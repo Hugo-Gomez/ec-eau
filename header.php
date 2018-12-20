@@ -1,5 +1,5 @@
 <title>Ec'eau | La solution écologique et économique</title>
-<link rel="icon" type="image/svg+xml" size="any" href="images/logo.svg" />
+<link rel="icon" type="image/png" size="any" href="images/favicon.png" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

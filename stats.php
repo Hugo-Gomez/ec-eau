@@ -274,7 +274,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-          <h2 class="title">Vaiselle</h2>
+          <h2 class="title">Vaisselle</h2>
           <p class="description">
             On observe sur ce graphique quelque chose d'intéressant, car la différence entre
             les usagers utilisant un lave-vaisselle et ceux qui font la vaiselle à la main n'est

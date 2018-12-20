@@ -42,8 +42,8 @@
           <div class="block-23 mb-3">
             <ul>
               <li><span class="icon icon-map-marker"></span><span class="text">HETIC - 27 rue bis de Progrès, Montreuil 93100, France</span></li>
-              <li><a href="#"><span class="icon icon-phone"></span><span class="text">+33 6 34 56 09 34</span></a></li>
-              <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@ec-eau.com</span></a></li>
+              <li><span class="icon icon-phone"></span><span class="text">+33 6 34 56 09 34</span></li>
+              <li><span class="icon icon-envelope"></span><span class="text">info@ec-eau.com</span></li>
             </ul>
           </div>
         </div>
