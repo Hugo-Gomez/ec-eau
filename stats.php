@@ -40,14 +40,17 @@ $pctBainNon = ($bainNon / $height) * 100;
 //echo "<!-- bain pct :".$pctBainNon." ".$pctBainOui."-->";
 
 //vaisselle
-$vMain = 0;
-$vLave = 0;
+$vOui = 0;
+$vNon = 0;
+$vHeight = 0;
 foreach ($res as $row) {
-  if($row["choixVaisselle"] == "main"){$vMain ++;}
-  if($row["choixVaisselle"] == "lave-vaisselle"){$vLave ++;}
+  if($row["choixVaisselle"] == "main"){
+    if($row["methVaisselle"] == "oui"){$vOui ++;}
+    if($row["methVaisselle"] == "non"){$vNon ++;}
+  }
 }
-$pctVMain = ($vMain / $height) * 100;
-$pctVLave = ($vLave / $height) * 100;
+$pctVOui = ($vOui / $vHeight) * 100;
+$pctVNon = ($vNon / $vHeight) * 100;
 //echo "<!-- vaisselle :".$vMain." ".$vLave."-->";
 //echo "<!-- vaisselle pct :".$pctVMain." ".$pctVLave."-->";
 
@@ -136,7 +139,7 @@ $pctDouche = [round($pctDFaible),round($pctDMoyen),round($pctDFort)];
 $bain = [$bainNon,$bainOui];
 $pctBain = [round($pctBainNon),round($pctBainOui)];
 
-$vaisselle = [$vMain,$vLave];
+$vaisselle = [$vOui,$vNon];
 $pctVaisselle = [round($pctVMain),round($pctVLave)];
 
 $MAL = [$MAL0_5,$MAL5_10,$MAL10_15,$MAL15_20,$MAL20_25,$MAL25_plus];
@@ -446,7 +449,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
     var dishChart = new Chart(dishCtx, {
       type: 'bar',
       data: {
-          labels: ["À la main", "Lave-Vaiselle"],
+          labels: ["Oui", "Non"],
           datasets: [{
               backgroundColor: "orange",
               borderColor: "orange",
@@ -456,7 +459,7 @@ $pctBouteille = [round($pctBoOui),round($pctBoNon)];
       options: {
         title: {
           display: true,
-          text: "Méthode de vaisselle"
+          text: "nombre de perssone qui laissent couler l'eau durant une vaisselle"
         },
         legend: {
           display: false
