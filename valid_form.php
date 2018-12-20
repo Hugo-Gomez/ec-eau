@@ -338,6 +338,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
               <?php
               }
             ?>
+            <a class="nav-link px-4" id="v-pills-file-alt-tab" data-toggle="pill" href="#v-pills-file-alt" role="tab" aria-controls="v-pills-file-alt" aria-selected="false"><i class="fas fa-file-alt"></i> Récap</a>
             </div>
           </div>
           <div class="col-md-8 ftco-animate p-4 p-md-5 d-flex align-items-center">
@@ -514,8 +515,14 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                 <?php
                 }
                 ?>
+
                 </div>
-                
+                <div class="tab-pane fade py-5" id="v-pills-file-alt" role="tabpanel" aria-labelledby="v-pills-file-alt-tab">
+                <i class="icon mb-3 d-block fas fa-file-alt"></i>
+                <h2 class="mb-4">Récap</h2>
+                <p>- Boire de l’eau en bouteille est économiquement plus cher que boire de l’eau du robinet. L’eau en bouteille a aussi un impact écologique plus fort à cause de l’embouteillage plastique et de la logistique. Il existe en plus des solutions abordables pour filtrer l’eau du robinet afin de supprimer certaines particules comme le calcaire ou le plomb</p>
+                </div>
+               
             </div>
           </div>
         </div>
