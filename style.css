@@ -19,6 +19,7 @@
   color: #5BA7D2;
   background-color: white;
 }
+
 /* GENERIC PERSO */
 
 .white-text {
@@ -26,8 +27,7 @@
 }
 
 .white-plot {
-  background-color: white;
-  border: 5px solid #73e8b8;
+  color: white;
 }
 
 
@@ -262,8 +262,25 @@ caption {
   caption-side: bottom; }
 
 th {
-  text-align: inherit; }
-
+  text-align: inherit;
+  text-align: inherit;
+  font-family: monospace;
+  border: solid #6495ed;
+  padding: 5px;
+  background-color: #D0E3FA; }
+  tr{
+    font-family: sans-serif;
+      border: solid #6495ed;
+      text-align: center;
+      background-color: #ffffff;
+  }
+  td{
+    font-family: sans-serif;
+    border: solid #6495ed;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+  }
 label {
   display: inline-block;
   margin-bottom: 0.5rem; }
@@ -8604,11 +8621,6 @@ textarea.form-control {
     font-weight: 400;
     font-size: 40px;
     color: #fff; }
-    .ftco-counter .text strong.number.total{
-      font-weight: 400;
-      font-size: 80px;
-      color: #fff; }
-
   .ftco-counter .text span {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.7); }

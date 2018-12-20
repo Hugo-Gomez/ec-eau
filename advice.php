@@ -12,7 +12,7 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center">
-            <h1 class="mb-3 bread">Améliorer sa consommation d'eau</h1>
+            <h1 class="mb-3 bread">Réduire sa consommation d'eau</h1>
           </div>
         </div>
       </div>
@@ -170,7 +170,7 @@
                 <i class="icon mb-3 d-block fas fa-tint"></i>
                 <h2 class="mb-4">Eau à boire</h2>
                 <p>Selon 
-                <a target="_blank" style ="text-decoration: underline;" href="https://www.quechoisir.org/guide-d-achat-quelle-eau-boire-n4855/">UFC-Que Choisir</a>, si vous habitez dans les moyennes et grandes villes, il vaut mieux privilégier l’eau du robinet, plus écologique et moins chère que celle en bouteille[19]. La qualité de l’eau potable de sa commune peut être vérifier grâce à la carte du ministère des Solidarités et de la Santé en cliquant sur ce <a target="_blank" style ="text-decoration: underline;" href="https://solidarites-sante.gouv.fr/sante-et-environnement/eaux/article/qualite-de-l-eau-potable">lien.</a></p>
+                <a target="_blank" style ="text-decoration: underline;" href="https://www.quechoisir.org/guide-d-achat-quelle-eau-boire-n4855/">UFC-Que Choisir</a>, si vous habitez dans les moyennes et grandes villes, il vaut mieux privilégier l’eau du robinet, plus écologique et moins chère que celle en bouteille. La qualité de l’eau potable de sa commune peut être vérifier grâce à la carte du ministère des Solidarités et de la Santé en cliquant sur ce <a target="_blank" style ="text-decoration: underline;" href="https://solidarites-sante.gouv.fr/sante-et-environnement/eaux/article/qualite-de-l-eau-potable">lien.</a></p>
                 <p>
                 <a target="_blank" style ="text-decoration: underline;" href="https://www.linfodurable.fr/conso/eau-en-bouteille-eau-du-robinet-laquelle-choisir-2834
 ">L’UFC-Que Choisir</a> recommande aux personnes souhaitant tout de même en utiliser de remplacer régulièrement la cartouche, de conserver la carafe filtrante et son eau en réfrigérateur et de consommer l’eau filtrée rapidement, idéalement dans les 24 heures après filtration.</p>

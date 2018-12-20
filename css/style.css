@@ -75,10 +75,6 @@
   justify-content: center;
 }
 
-.navbar-brand {
-  width: 10%;
-}
-
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -266,8 +262,25 @@ caption {
   caption-side: bottom; }
 
 th {
-  text-align: inherit; }
-
+  text-align: inherit;
+  text-align: inherit;
+  font-family: monospace;
+  border: solid #6495ed;
+  padding: 5px;
+  background-color: #D0E3FA; }
+  tr{
+    font-family: sans-serif;
+      border: solid #6495ed;
+      text-align: center;
+      background-color: #ffffff;
+  }
+  td{
+    font-family: sans-serif;
+    border: solid #6495ed;
+    width: 20%;
+    padding: 5px;
+    text-align: center;
+  }
 label {
   display: inline-block;
   margin-bottom: 0.5rem; }
