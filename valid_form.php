@@ -490,10 +490,10 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                   <th>
                   </th>
                   <th>
-                    consomation (en L/an)
+                    consommation (en L/an)
                   </th>
                   <th>
-                    consomation (en €/an)                  
+                    consommation (en €/an)                  
                   </th>
                   <th>
                     économie possible (en L/an)
@@ -576,7 +576,7 @@ $eco = $ecoDouche + $ecoBain + $ecoDents + $ecoVaisselle + $ecoMal + $ecoVoiture
                   <tr>
                     <td>
                     <!--consoDouche , consoBain , consoDents , consoVaisselle , consoMal , consoVoiture , consoPiscine-->
-                    <b>Machine a lavé</b>
+                    <b>Machine à laver</b>
                     </td>
                     <td>
                     <?=$consoMal?>
